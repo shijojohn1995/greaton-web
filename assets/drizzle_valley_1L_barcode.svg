@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="287.5" height="90" viewBox="0 0 287.5 90">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff" />
+  <!-- Bars -->
+  <rect x="25" y="0" width="2.5" height="72" fill="#000000" />
+  <rect x="30" y="0" width="2.5" height="72" fill="#000000" />
+  <rect x="40" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="45" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="47.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="52.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="60" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="62.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="65" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="70" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="75" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="77.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="80" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="82.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="87.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="95" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="97.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="100" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="105" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="112.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="115" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="117.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="125" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="127.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="135" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="140" y="0" width="2.5" height="72" fill="#000000" />
+  <rect x="145" y="0" width="2.5" height="72" fill="#000000" />
+  <rect x="150" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="152.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="157.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="160" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="167.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="180" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="185" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="190" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="192.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="195" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="202.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="210" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="212.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="215" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="220" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="225" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="237.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="240" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="245" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="247.5" y="0" width="2.5" height="65" fill="#000000" />
+  <rect x="255" y="0" width="2.5" height="72" fill="#000000" />
+  <rect x="260" y="0" width="2.5" height="72" fill="#000000" />
+  <!-- Text -->
+  <g font-family="'Poppins', sans-serif, Arial" font-size="27.5px" font-weight="bold" fill="#000000">
+    <text x="5" y="86">8</text>
+    <text x="36.25" y="86">9</text>
+    <text x="53.75" y="86">0</text>
+    <text x="71.25" y="86">6</text>
+    <text x="88.75" y="86">0</text>
+    <text x="106.25" y="86">0</text>
+    <text x="123.75" y="86">1</text>
+    <text x="153.75" y="86">2</text>
+    <text x="171.25" y="86">3</text>
+    <text x="188.75" y="86">4</text>
+    <text x="206.25" y="86">5</text>
+    <text x="223.75" y="86">6</text>
+    <text x="241.25" y="86">2</text>
+  </g>
+</svg>

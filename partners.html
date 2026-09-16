@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Production Partners - Greaton Food Products</title>
+    <meta name="description" content="Official production partners of Greaton Food Products. Verification, address, and scan-to-save contact details for Thirumala Industries.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+        /* Extra responsiveness for QR download button */
+        .qr-card .btn-download {
+            margin-top: 10px;
+            width: 100%;
+            max-width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-container"></div>
+    <div id="flash-overlay" class="thunder-flash"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.jpg" alt="Greaton Food Products Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                <li><a href="index.html#products" class="nav-link">Products</a></li>
+                <li><a href="partners.html" class="nav-link active">Partners</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Partners Hero Section -->
+    <section class="partners-hero">
+        <div class="partners-hero-content">
+            <h1>Our Production Partners</h1>
+            <p>Collaborating with trusted facilities to deliver purity, quality, and refreshments you can rely on.</p>
+        </div>
+    </section>
+
+    <!-- Partner Details Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Verified Partner</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="partners-grid">
+                <!-- Partner Card -->
+                <div class="partner-detail-card">
+                    <div class="partner-header">
+                        <h2 class="partner-title">THIRUMALA INDUSTRIES</h2>
+                        <span class="partner-badge">Production Partner</span>
+                    </div>
+                    <div class="partner-info-grid">
+                        <div class="partner-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="partner-info-text">
+                                <h4>Address</h4>
+                                <p>
+                                    ASSEMENT NO :286, 1ST DIVISION,<br>
+                                    B.N. ROAD, NEAR SALES TAX OFFICE,<br>
+                                    GUNDLUPET, CHAMARAJANAGAR DIST - 571111
+                                </p>
+                            </div>
+                        </div>
+                        <div class="partner-info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="partner-info-text">
+                                <h4>Telephone</h4>
+                                <p><a href="tel:9972120119">9972120119</a></p>
+                            </div>
+                        </div>
+                        <div class="partner-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="partner-info-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:prasadgowda.m@gmail.com">prasadgowda.m@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- QR Card -->
+                <div class="qr-card">
+                    <h3 class="qr-title">Contact QR Code</h3>
+                    <p class="qr-subtitle">Scan using your smartphone camera to save the partner's contact details directly to your address book.</p>
+                    
+                    <div class="qr-code-wrapper">
+                        <div id="qrcode"></div>
+                    </div>
+
+                    <button id="download-qr-btn" class="btn btn-download">
+                        <i class="fas fa-download"></i> Download QR Card (PNG)
+                    </button>
+                    <a href="assets/Thirumala_Industries_Contact_Card.pdf" download="Thirumala_Industries_Contact_Card.pdf" class="btn btn-download" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: var(--secondary-color); margin-top: 10px; width: 100%;">
+                        <i class="fas fa-file-pdf"></i> Download QR Card (PDF)
+                    </a>
+                    <canvas id="qr-download-canvas" width="600" height="850"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about">
+                    <h3>Greaton</h3>
+                    <p>Delivering purity and taste to every household in Wayanad. Water, Soda, and Juices you can trust.</p>
+                </div>
+                <div class="footer-col links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="barcodes.html">Barcodes</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Kaniyambetta, Wayanad</p>
+                    <p><i class="fas fa-phone"></i> +91 9072119994</p>
+                    <p><i class="fas fa-envelope"></i> info@greaton.co.in</p>
+                </div>
+                <div class="footer-col newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe for latest products and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="button"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Greaton Food Products. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <button id="chat-widget-btn" class="chat-widget-btn">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <div id="chat-popup" class="chat-popup">
+        <div class="chat-header">
+            <div class="chat-header-actions">
+                <button id="close-chat" class="close-chat"><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="chat-title">
+                <h3>Contact Us</h3>
+                <div class="chat-avatar">
+                   <i class="fas fa-user-circle"></i>
+                </div>
+                <p>We'll respond as soon as we can.</p>
+            </div>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="message received">
+                <div class="message-content">
+                    <p>Let me know if you have any questions!</p>
+                </div>
+                <span class="timestamp">Just now</span>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <form id="chat-form">
+                <div class="input-row">
+                    <input type="tel" id="chat-phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-row">
+                    <input type="email" id="chat-email" placeholder="Email (Optional)">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="chat-input" placeholder="Message..." autocomplete="off">
+                    <button type="submit" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nOMQVqgTC8+2uqDIxDYLD5GQN5ReWlmny+im4EFmsvyUYLCXGDm/JES3Zo151g5y2QtHLdUt8MRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Main Script (handles particles, mobile menu, chat) -->
+    <script src="script.js"></script>
+
+    <!-- Partners-Specific Dynamic QR & Canvas Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Thirumala Industries Contact Details in VCard 3.0 Format
+            const vcardData = `BEGIN:VCARD
+VERSION:3.0
+FN:THIRUMALA INDUSTRIES
+ORG:THIRUMALA INDUSTRIES
+TITLE:Production Partner
+TEL;TYPE=WORK,VOICE:9972120119
+EMAIL;TYPE=PREF,INTERNET:prasadgowda.m@gmail.com
+ADR;TYPE=WORK:;;ASSEMENT NO :286, 1ST DIVISION, B.N. ROAD, NEAR SALES TAX OFFICE;GUNDLUPET;CHAMARAJANAGAR DIST;571111;India
+NOTE:Production Partner for Greaton Food Products
+END:VCARD`;
+
+            // Initialize QR Code
+            const qrcodeContainer = document.getElementById("qrcode");
+            const qrcode = new QRCode(qrcodeContainer, {
+                text: vcardData,
+                width: 200,
+                height: 200,
+                colorDark: "#263238", // matches var(--text-dark) slate/navy grey
+                colorLight: "#ffffff",
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            // Download Premium Business Card
+            const downloadBtn = document.getElementById("download-qr-btn");
+            downloadBtn.addEventListener("click", () => {
+                const originalText = downloadBtn.innerHTML;
+                downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+                downloadBtn.disabled = true;
+
+                // Let the UI render the spinner before blocking CPU execution
+                setTimeout(() => {
+                    try {
+                        const canvas = document.getElementById("qr-download-canvas");
+                        const ctx = canvas.getContext("2d");
+                        
+                        // Set canvas size (sharper rendering)
+                        canvas.width = 600;
+                        canvas.height = 850;
+                        
+                        // 1. Draw Card Background
+                        ctx.fillStyle = "#ffffff";
+                        ctx.fillRect(0, 0, canvas.width, canvas.height);
+                        
+                        // Elegant Outer Border
+                        ctx.strokeStyle = "#0288D1"; // var(--primary-color)
+                        ctx.lineWidth = 14;
+                        ctx.strokeRect(7, 7, canvas.width - 14, canvas.height - 14);
+                        
+                        // Slate Inner Border
+                        ctx.strokeStyle = "#455A64"; // var(--secondary-color)
+                        ctx.lineWidth = 2;
+                        ctx.strokeRect(22, 22, canvas.width - 44, canvas.height - 44);
+                        
+                        // 2. Draw Greaton Header Branding
+                        ctx.textAlign = "center";
+                        ctx.fillStyle = "#0288D1";
+                        ctx.font = "bold 32px 'Poppins', sans-serif";
+                        ctx.fillText("GREATON FOOD PRODUCTS", canvas.width / 2, 85);
+                        
+                        ctx.fillStyle = "#455A64";
+                        ctx.font = "italic 18px 'Poppins', sans-serif";
+                        ctx.fillText("Refreshing Life", canvas.width / 2, 115);
+                        
+                        // Branded Separator Line
+                        ctx.beginPath();
+                        ctx.moveTo(50, 140);
+                        ctx.lineTo(canvas.width - 50, 140);
+                        ctx.strokeStyle = "#ECEFF1"; // var(--bg-light)
+                        ctx.lineWidth = 3;
+                        ctx.stroke();
+                        
+                        // 3. Draw Production Partner Badge
+                        const badgeWidth = 240;
+                        const badgeHeight = 36;
+                        const badgeX = (canvas.width - badgeWidth) / 2;
+                        const badgeY = 165;
+                        
+                        ctx.fillStyle = "#0288D1";
+                        drawRoundRect(ctx, badgeX, badgeY, badgeWidth, badgeHeight, 18);
+                        ctx.fill();
+                        
+                        ctx.fillStyle = "#ffffff";
+                        ctx.font = "bold 13px 'Poppins', sans-serif";
+                        ctx.fillText("PRODUCTION PARTNER", canvas.width / 2, badgeY + 22);
+                        
+                        // 4. Partner Name
+                        ctx.fillStyle = "#263238";
+                        ctx.font = "bold 32px 'Poppins', sans-serif";
+                        ctx.fillText("THIRUMALA INDUSTRIES", canvas.width / 2, 255);
+                        
+                        // Blue Accent line
+                        ctx.beginPath();
+                        ctx.moveTo(150, 280);
+                        ctx.lineTo(canvas.width - 150, 280);
+                        ctx.strokeStyle = "#0288D1";
+                        ctx.lineWidth = 2;
+                        ctx.stroke();
+                        
+                        // 5. Contact Details Text
+                        ctx.fillStyle = "#455A64";
+                        ctx.font = "bold 15px 'Poppins', sans-serif";
+                        ctx.fillText("OFFICE ADDRESS", canvas.width / 2, 315);
+                        
+                        ctx.fillStyle = "#263238";
+                        ctx.font = "500 15px 'Poppins', sans-serif";
+                        ctx.fillText("ASSEMENT NO :286, 1ST DIVISION, B.N. ROAD,", canvas.width / 2, 340);
+                        ctx.fillText("NEAR SALES TAX OFFICE, GUNDLUPET,", canvas.width / 2, 365);
+                        ctx.fillText("CHAMARAJANAGAR DIST - 571111", canvas.width / 2, 390);
+                        
+                        ctx.fillStyle = "#455A64";
+                        ctx.font = "bold 15px 'Poppins', sans-serif";
+                        ctx.fillText("CONTACT DETAILS", canvas.width / 2, 440);
+                        
+                        ctx.fillStyle = "#263238";
+                        ctx.font = "500 16px 'Poppins', sans-serif";
+                        ctx.fillText("Tel: +91 9972120119", canvas.width / 2, 465);
+                        ctx.fillText("Email: prasadgowda.m@gmail.com", canvas.width / 2, 490);
+                        
+                        // 6. Draw QR Code
+                        const qrCanvas = qrcodeContainer.querySelector("canvas");
+                        const qrImg = qrcodeContainer.querySelector("img");
+                        
+                        const executeDownload = (qrSource) => {
+                            const qrSize = 220;
+                            const qrX = (canvas.width - qrSize) / 2;
+                            const qrY = 535;
+                            
+                            // Shadow Card frame for QR code
+                            ctx.shadowColor = "rgba(0, 0, 0, 0.08)";
+                            ctx.shadowBlur = 15;
+                            ctx.shadowOffsetY = 5;
+                            ctx.fillStyle = "#ffffff";
+                            drawRoundRect(ctx, qrX - 15, qrY - 15, qrSize + 30, qrSize + 30, 16);
+                            ctx.fill();
+                            
+                            // Reset Shadows
+                            ctx.shadowColor = "transparent";
+                            ctx.shadowBlur = 0;
+                            ctx.shadowOffsetY = 0;
+                            
+                            // Draw QR
+                            ctx.drawImage(qrSource, qrX, qrY, qrSize, qrSize);
+                            
+                            // Branded Card Footer
+                            ctx.fillStyle = "#0288D1";
+                            ctx.font = "bold 13px 'Poppins', sans-serif";
+                            ctx.fillText("SCAN TO SAVE CONTACT DETAILS", canvas.width / 2, 800);
+                            
+                            ctx.fillStyle = "#455A64";
+                            ctx.font = "500 12px 'Poppins', sans-serif";
+                            ctx.fillText("Official Partner of Greaton Food Products", canvas.width / 2, 822);
+                            
+                            // Trigger Download with DOM-attached Link for Safari/Firefox support
+                            const image = canvas.toDataURL("image/png");
+                            const link = document.createElement("a");
+                            link.download = "Thirumala_Industries_Contact_QR.png";
+                            link.href = image;
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        };
+
+                        // Select the best available source (canvas is synchronous and always ready)
+                        if (qrCanvas && qrCanvas.width > 0) {
+                            executeDownload(qrCanvas);
+                        } else if (qrImg && qrImg.src && qrImg.complete) {
+                            executeDownload(qrImg);
+                        } else if (qrImg) {
+                            // If image is still loading asynchronously
+                            qrImg.onload = () => executeDownload(qrImg);
+                        } else {
+                            throw new Error("QR Code elements not found");
+                        }
+                    } catch (err) {
+                        console.error("QR Download Error:", err);
+                        alert("Could not generate card image. Please scan the QR code directly from the screen.");
+                    } finally {
+                        downloadBtn.innerHTML = originalText;
+                        downloadBtn.disabled = false;
+                    }
+                }, 300);
+            });
+
+            // Round rect canvas draw utility
+            function drawRoundRect(ctx, x, y, width, height, radius) {
+                ctx.beginPath();
+                ctx.moveTo(x + radius, y);
+                ctx.lineTo(x + width - radius, y);
+                ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+                ctx.lineTo(x + width, y + height - radius);
+                ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+                ctx.lineTo(x + radius, y + height);
+                ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+                ctx.lineTo(x, y + radius);
+                ctx.quadraticCurveTo(x, y, x + radius, y);
+                ctx.closePath();
+            }
+        });
+    </script>
+</body>
+</html>

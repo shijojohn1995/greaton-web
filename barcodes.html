@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drizzle Valley Barcodes - Greaton Food Products</title>
+    <meta name="description" content="Official scannable EAN-13 barcodes and print-ready product labels for Drizzle Valley Packaged Drinking Water.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+        
+        /* Barcode Grid Styles */
+        .barcodes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            margin-top: 40px;
+        }
+        
+        .barcode-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: 1.2fr 1.8fr;
+            gap: 40px;
+            transition: var(--transition);
+        }
+        
+        .barcode-card:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        
+        @media (max-width: 992px) {
+            .barcode-card {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .barcode-meta {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .product-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+        
+        .product-title {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .brand-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+        
+        .code-display {
+            background-color: var(--bg-light);
+            padding: 15px;
+            border-radius: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            text-align: center;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            border: 1px dashed var(--secondary-color);
+        }
+        
+        .barcode-visual {
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border: 1px solid #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .barcode-visual img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .barcode-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .btn-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-action-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-action-outline:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        .btn-action-solid {
+            background-color: var(--secondary-color);
+            color: #fff;
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .btn-action-solid:hover {
+            background-color: var(--text-dark);
+            border-color: var(--text-dark);
+            transform: translateY(-2px);
+        }
+        
+        .label-preview-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--bg-light);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+        }
+        
+        .label-preview-title {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .label-img-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        
+        .label-img-wrapper img {
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+        
+        .label-img-wrapper:hover img {
+            transform: scale(1.03);
+        }
+        
+        .horizontal-label {
+            max-height: 220px;
+        }
+        
+        .vertical-label {
+            max-height: 380px;
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-container"></div>
+    <div id="flash-overlay" class="thunder-flash"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.jpg" alt="Greaton Food Products Logo">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                <li><a href="index.html#products" class="nav-link">Products</a></li>
+                <li><a href="partners.html" class="nav-link">Partners</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Barcode Hero Section -->
+    <section class="partners-hero">
+        <div class="partners-hero-content">
+            <h1>Product Barcodes</h1>
+            <p>Official scannable EAN-13 codes and print-ready package labels for Drizzle Valley.</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Drizzle Valley Brand</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="barcodes-grid">
+                
+                <!-- Website URL QR Code -->
+                <div class="barcode-card">
+                    <div class="barcode-meta">
+                        <span class="product-badge">Website QR Code</span>
+                        <h3 class="product-title">Verified Partners Page Link</h3>
+                        <p class="brand-subtitle">Links to: https://www.greaton.co.in/partners.html</p>
+                        
+                        <div class="code-display">SCAN LINK</div>
+                        
+                        <div class="barcode-visual">
+                            <img src="assets/partners_page_qr.svg" style="width: 150px; height: 150px;" alt="Partners Page QR Code">
+                        </div>
+                        
+                        <div class="barcode-actions">
+                            <a href="assets/partners_page_qr.svg" download="Partners_Page_QR.svg" class="btn-action btn-action-outline">
+                                <i class="fas fa-file-code"></i> Download SVG QR Code (Vector)
+                            </a>
+                            <a href="assets/partners_page_qr.png" download="Partners_Page_QR.png" class="btn-action btn-action-outline">
+                                <i class="fas fa-file-image"></i> Download PNG QR Code (Raster)
+                            </a>
+                            <a href="assets/partners_page_qr.pdf" download="Partners_Page_QR.pdf" class="btn-action btn-action-solid">
+                                <i class="fas fa-file-pdf"></i> Download PDF QR Code (Print A4)
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="label-preview-container">
+                        <h4 class="label-preview-title">Manufacturing Unit Compliance</h4>
+                        <div class="label-img-wrapper" style="padding: 30px; text-align: center; display: block; background: #fff;">
+                            <i class="fas fa-qrcode" style="font-size: 5rem; color: var(--primary-color); margin-bottom: 20px;"></i>
+                            <p style="font-size: 0.95rem; color: #555; line-height: 1.6; margin: 0;">
+                                This QR code corresponds to the square placeholder on your product labels. 
+                                By scanning it, customers and regulatory inspectors (ISI/FSSAI) can immediately access the verified manufacturing address details for <strong>Thirumala Industries</strong> on your official portal.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 1: 1 Liter -->
+                <div class="barcode-card">
+                    <div class="barcode-meta">
+                        <span class="product-badge">1 Liter Bottle</span>
+                        <h3 class="product-title">Packaged Drinking Water</h3>
+                        <p class="brand-subtitle">Brand: Drizzle Valley</p>
+                        
+                        <div class="code-display">8906001234562</div>
+                        
+                        <div class="barcode-visual">
+                            <!-- Reference the generated EAN-13 SVG -->
+                            <img src="assets/drizzle_valley_1L_barcode.svg" alt="Drizzle Valley 1L Barcode">
+                        </div>
+                        
+                        <div class="barcode-actions">
+                            <a href="assets/drizzle_valley_1L_barcode.svg" download="Drizzle_Valley_1L_Barcode.svg" class="btn-action btn-action-outline">
+                                <i class="fas fa-file-code"></i> Download SVG Barcode (Vector)
+                            </a>
+                            <a href="assets/drizzle_valley_1L_barcode.png" download="Drizzle_Valley_1L_Barcode.png" class="btn-action btn-action-outline">
+                                <i class="fas fa-file-image"></i> Download PNG Barcode (Raster)
+                            </a>
+                            <a href="assets/drizzle_valley_1L_labeled.jpg" download="Drizzle_Valley_1L_Labeled.jpg" class="btn-action btn-action-solid">
+                                <i class="fas fa-tags"></i> Download Labeled Design
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="label-preview-container">
+                        <h4 class="label-preview-title">Label Design Preview (Horizontal)</h4>
+                        <div class="label-img-wrapper">
+                            <img src="assets/drizzle_valley_1L_labeled.jpg" class="horizontal-label" alt="Drizzle Valley 1L Labeled Design">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: 500 ml -->
+                <div class="barcode-card">
+                    <div class="barcode-meta">
+                        <span class="product-badge">500 ml Bottle</span>
+                        <h3 class="product-title">Packaged Drinking Water</h3>
+                        <p class="brand-subtitle">Brand: Drizzle Valley</p>
+                        
+                        <div class="code-display">8906001234579</div>
+                        
+                        <div class="barcode-visual">
+                            <!-- Reference the generated EAN-13 SVG -->
+                            <img src="assets/drizzle_valley_500ml_barcode.svg" alt="Drizzle Valley 500ml Barcode">
+                        </div>
+                        
+                        <div class="barcode-actions">
+                            <a href="assets/drizzle_valley_500ml_barcode.svg" download="Drizzle_Valley_500ml_Barcode.svg" class="btn-action btn-action-outline">
+                                <i class="fas fa-file-code"></i> Download SVG Barcode (Vector)
+                            </a>
+                            <a href="assets/drizzle_valley_500ml_barcode.png" download="Drizzle_Valley_500ml_Barcode.png" class="btn-action btn-action-outline">
+                                <i class="fas fa-file-image"></i> Download PNG Barcode (Raster)
+                            </a>
+                            <a href="assets/drizzle_valley_500ml_labeled.jpg" download="Drizzle_Valley_500ml_Labeled.jpg" class="btn-action btn-action-solid">
+                                <i class="fas fa-tags"></i> Download Labeled Design
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="label-preview-container">
+                        <h4 class="label-preview-title">Label Design Preview (Vertical)</h4>
+                        <div class="label-img-wrapper">
+                            <img src="assets/drizzle_valley_500ml_labeled.jpg" class="vertical-label" alt="Drizzle Valley 500ml Labeled Design">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about">
+                    <h3>Greaton</h3>
+                    <p>Delivering purity and taste to every household in Wayanad. Water, Soda, and Juices you can trust.</p>
+                </div>
+                <div class="footer-col links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#products">Products</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Kaniyambetta, Wayanad</p>
+                    <p><i class="fas fa-phone"></i> +91 9072119994</p>
+                    <p><i class="fas fa-envelope"></i> info@greaton.co.in</p>
+                </div>
+                <div class="footer-col newsletter">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe for latest products and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="button"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Greaton Food Products. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chat Widget -->
+    <button id="chat-widget-btn" class="chat-widget-btn">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <div id="chat-popup" class="chat-popup">
+        <div class="chat-header">
+            <div class="chat-header-actions">
+                <button id="close-chat" class="close-chat"><i class="fas fa-chevron-down"></i></button>
+            </div>
+            <div class="chat-title">
+                <h3>Contact Us</h3>
+                <div class="chat-avatar">
+                   <i class="fas fa-user-circle"></i>
+                </div>
+                <p>We'll respond as soon as we can.</p>
+            </div>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="message received">
+                <div class="message-content">
+                    <p>Let me know if you have any questions!</p>
+                </div>
+                <span class="timestamp">Just now</span>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <form id="chat-form">
+                <div class="input-row">
+                    <input type="tel" id="chat-phone" placeholder="Phone Number" required>
+                </div>
+                <div class="input-row">
+                    <input type="email" id="chat-email" placeholder="Email (Optional)">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="chat-input" placeholder="Message..." autocomplete="off">
+                    <button type="submit" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Script (handles particles, mobile menu, chat) -->
+    <script src="script.js"></script>
+</body>
+</html>
