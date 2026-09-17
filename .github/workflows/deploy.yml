@@ -1,0 +1,33 @@
+name: Deploy to Live Server
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab if needed
+
+jobs:
+  web-deploy:
+    name: Sync to Live Server
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: 📂 Sync Files to /public_html
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Path on your hosting server where website files are served:
+          server-dir: public_html/
+          # Note: If your FTP account root is already set directly inside public_html/, change server-dir to: ./
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/scratch/**
+            **/README.md
