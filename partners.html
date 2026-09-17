@@ -1,124 +1,746 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Production Partners - Greaton Food Products</title>
-    <meta name="description" content="Official production partners of Greaton Food Products. Verification, address, and scan-to-save contact details for Thirumala Industries.">
+    <title>Certified Production Partners | Thirumala Industries & Greaton Food Products</title>
+    <meta name="description" content="Official production and manufacturing partner verification for Greaton Food Products. Details, facility address, and contact QR code for Thirumala Industries.">
+    <meta name="keywords" content="Greaton Partners, Thirumala Industries, Beverage Manufacturing Partner, Water Bottling Plant Gundlupet, Greaton Food Products Verification">
+    <meta name="author" content="Greaton Food Products">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.greatonfoodproducts.com/partners.html">
+
+    <!-- Theme & Mobile Colors -->
+    <meta name="theme-color" content="#E50914" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0B0C10" media="(prefers-color-scheme: dark)">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Greaton">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="manifest" href="assets/site.webmanifest">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.greatonfoodproducts.com/partners.html">
+    <meta property="og:title" content="Certified Production Partners | Greaton Food Products & Thirumala Industries">
+    <meta property="og:description" content="Official production partner verification, facility address, and scan-to-save contact details for Thirumala Industries.">
+    <meta property="og:image" content="https://www.greatonfoodproducts.com/assets/og-image.jpg">
+    <meta property="og:image:secure_url" content="https://www.greatonfoodproducts.com/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Greaton Production Partner Thirumala Industries">
+    <meta property="og:site_name" content="Greaton Food Products">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.greatonfoodproducts.com/partners.html">
+    <meta name="twitter:title" content="Production Partners | Greaton Food Products">
+    <meta name="twitter:description" content="Verified partner facilities, addresses, and digital contact information for Thirumala Industries.">
+    <meta name="twitter:image" content="https://www.greatonfoodproducts.com/assets/og-image.jpg">
+
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.greatonfoodproducts.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Partners",
+              "item": "https://www.greatonfoodproducts.com/partners.html"
+            }
+          ]
+        },
+        {
+          "@type": "Organization",
+          "name": "Thirumala Industries",
+          "foundingDate": "2009",
+          "description": "Certified Production Partner of Greaton Food Products, established in 2009. Official bottlers of Unique Packaged Drinking Water (500ml, 1L, 2L, 5L), Drizzle Valley 1L, Bisley Club Soda (600ml, 1L), and Bisley Carbonated Drinks (Lemon & Orange 200ml).",
+          "telephone": "+91-9972120119",
+          "email": "prasadgowda.m@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Assement No: 286, 1st Division, B.N. Road, Near Sales Tax Office",
+            "addressLocality": "Gundlupet",
+            "addressRegion": "Chamarajanagar Dist, Karnataka",
+            "postalCode": "571111",
+            "addressCountry": "IN"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Theme Flash Prevention Script -->
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('greaton_theme_preference');
+            if (savedTheme === 'light' || savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else {
+                var hour = new Date().getHours();
+                var autoTheme = (hour >= 6 && hour < 18) ? 'light' : 'dark';
+                document.documentElement.setAttribute('data-theme', autoTheme);
+            }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .nav-link.active::after {
-            width: 100%;
-        }
-        .nav-link.active {
-            color: var(--primary-color);
-        }
-        /* Extra responsiveness for QR download button */
-        .qr-card .btn-download {
-            margin-top: 10px;
-            width: 100%;
-            max-width: 250px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=2.9">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="has-climate-bar">
+    <!-- Background Animated Particles Container -->
     <div id="particles-container"></div>
-    <div id="flash-overlay" class="thunder-flash"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container navbar-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo.jpg" alt="Greaton Food Products Logo">
-            </a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <!-- Header: Climate Top Bar + Main Navigation -->
+    <header class="site-header">
+        <!-- Live Signal & Wayanad Climate Details Bar -->
+        <div class="climate-top-bar">
+            <div class="container climate-container">
+                <div class="climate-left">
+                    <span id="signal-indicator-badge" class="signal-indicator">
+                        <span class="signal-dot"></span> <span>LIVE AUTO-SYNC</span>
+                    </span>
+                    <span class="climate-item">
+                        <i class="fas fa-location-dot"></i> <strong>Wayanad, Kerala</strong>
+                    </span>
+                    <span class="climate-item" id="climate-weather">
+                        <i class="fas fa-cloud-sun"></i> <strong>24°C</strong> • Mild Highland Breeze
+                    </span>
+                    <span class="climate-item" id="climate-time">
+                        <i class="fas fa-clock"></i> <strong>Loading time...</strong>
+                    </span>
+                </div>
+                <div class="climate-right">
+                    <div class="theme-manager-pill" id="theme-manager">
+                        <span class="tm-label"><i class="fas fa-sliders"></i> Theme:</span>
+                        <div class="tm-switcher">
+                            <button class="tm-btn active" data-mode="auto" title="Automatic time-based mode"><i class="fas fa-wand-magic-sparkles"></i> Auto</button>
+                            <button class="tm-btn" data-mode="light" title="Force Light Theme"><i class="fas fa-sun"></i> Light</button>
+                            <button class="tm-btn" data-mode="dark" title="Force Dark Theme"><i class="fas fa-moon"></i> Dark</button>
+                        </div>
+                    </div>
+                    <span class="climate-purity-badge"><i class="fas fa-droplet"></i> 100% Pure</span>
+                </div>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html#home" class="nav-link">Home</a></li>
-                <li><a href="index.html#about" class="nav-link">About Us</a></li>
-                <li><a href="index.html#products" class="nav-link">Products</a></li>
-                <li><a href="partners.html" class="nav-link active">Partners</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-            </ul>
         </div>
-    </nav>
+
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <a href="index.html" class="logo-wrapper">
+                    <div class="logo">
+                        <img src="assets/logo.jpg" alt="Greaton Food Products Logo">
+                    </div>
+                </a>
+
+                <div class="nav-actions">
+                    <ul class="nav-menu">
+                        <li><a href="index.html#home" class="nav-link">Home</a></li>
+                        <li><a href="index.html#about" class="nav-link">About Us</a></li>
+                        <li><a href="index.html#products" class="nav-link">Products</a></li>
+                        <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                        <li><a href="partners.html" class="nav-link active">Partners</a></li>
+                        <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    </ul>
+
+                    <!-- Mobile Hamburger Toggle -->
+                    <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation" role="button" tabindex="0">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- Partners Hero Section -->
     <section class="partners-hero">
         <div class="partners-hero-content">
-            <h1>Our Production Partners</h1>
-            <p>Collaborating with trusted facilities to deliver purity, quality, and refreshments you can rely on.</p>
+            <div class="hero-badge animate-hidden" style="margin-bottom: 15px;">
+                <i class="fas fa-handshake"></i> Certified Collaborations
+            </div>
+            <h1 class="animate-hidden">Our Production Partners</h1>
+            <p class="animate-hidden">Collaborating with state-of-the-art facilities to deliver uncompromising purity, high hygiene standards, and refreshments you can trust.</p>
+            <div class="partners-hero-stats animate-hidden">
+                <div class="phs-item">
+                    <span class="phs-num">2009</span>
+                    <span class="phs-lbl">Established</span>
+                </div>
+                <div class="phs-divider"></div>
+                <div class="phs-item">
+                    <span class="phs-num">15+</span>
+                    <span class="phs-lbl">Years Excellence</span>
+                </div>
+                <div class="phs-divider"></div>
+                <div class="phs-item">
+                    <span class="phs-num">4</span>
+                    <span class="phs-lbl">Beverage Lines</span>
+                </div>
+                <div class="phs-divider"></div>
+                <div class="phs-item">
+                    <span class="phs-num">25k+</span>
+                    <span class="phs-lbl">Daily Litres</span>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Partner Details Section -->
-    <section class="section bg-light">
+    <section class="section bg-light" id="facility">
         <div class="container">
             <div class="section-header">
-                <h2>Verified Partner</h2>
+                <span class="section-tag">Authorized Manufacturing</span>
+                <h2>Verified Production Facility</h2>
+                <p>Official manufacturing details, plant floor infrastructure, and contact verification for our licensed production partner.</p>
                 <div class="divider"></div>
+            </div>
+
+            <!-- Facility Photo Spotlight Banner -->
+            <div class="facility-spotlight-banner animate-hidden">
+                <div class="spotlight-media">
+                    <img src="assets/partner-plant-facility.jpg" alt="Thirumala Industries State-of-the-Art Bottling Facility Floor" loading="lazy">
+                    <div class="spotlight-overlay">
+                        <span class="spotlight-tag"><i class="fas fa-certificate"></i> Certified Bottling Plant</span>
+                        <h3>Thirumala Industries &bull; Automated Plant Floor</h3>
+                        <p>Fully automated non-contact filling, multi-barrier purification, and hygienic cleanrooms operational in Gundlupet since 2009.</p>
+                    </div>
+                </div>
+                <div class="spotlight-stats-bar">
+                    <div class="ss-stat">
+                        <i class="fas fa-layer-group"></i>
+                        <div>
+                            <strong>7-Stage RO + UV</strong>
+                            <span>Multi-Barrier Purity</span>
+                        </div>
+                    </div>
+                    <div class="ss-stat">
+                        <i class="fas fa-bolt"></i>
+                        <div>
+                            <strong>Cold Carbonation</strong>
+                            <span>High Fizz Effervescence</span>
+                        </div>
+                    </div>
+                    <div class="ss-stat">
+                        <i class="fas fa-shield-halved"></i>
+                        <div>
+                            <strong>IS 14543 &amp; FSSAI</strong>
+                            <span>Government Certified</span>
+                        </div>
+                    </div>
+                    <div class="ss-stat">
+                        <i class="fas fa-truck-fast"></i>
+                        <div>
+                            <strong>Kerala &amp; Karnataka</strong>
+                            <span>Dual State Supply Hub</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="partners-grid">
                 <!-- Partner Card -->
-                <div class="partner-detail-card">
+                <div class="partner-detail-card animate-hidden">
                     <div class="partner-header">
                         <h2 class="partner-title">THIRUMALA INDUSTRIES</h2>
                         <span class="partner-badge">Production Partner</span>
                     </div>
+                    <div class="partner-est-pill">
+                        <i class="fas fa-calendar-check"></i> Started in 2009 • 15+ Years of Certified Bottling Excellence
+                    </div>
                     <div class="partner-info-grid">
                         <div class="partner-info-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-location-dot"></i>
                             <div class="partner-info-text">
-                                <h4>Address</h4>
+                                <h4>Factory Address</h4>
                                 <p>
-                                    ASSEMENT NO :286, 1ST DIVISION,<br>
+                                    ASSEMENT NO : 286, 1ST DIVISION,<br>
                                     B.N. ROAD, NEAR SALES TAX OFFICE,<br>
-                                    GUNDLUPET, CHAMARAJANAGAR DIST - 571111
+                                    GUNDLUPET, CHAMARAJANAGAR DIST - 571111, KARNATAKA
                                 </p>
                             </div>
                         </div>
                         <div class="partner-info-item">
-                            <i class="fas fa-phone-alt"></i>
+                            <i class="fas fa-phone-volume"></i>
                             <div class="partner-info-text">
-                                <h4>Telephone</h4>
-                                <p><a href="tel:9972120119">9972120119</a></p>
+                                <h4>Telephone Support</h4>
+                                <p><a href="tel:9972120119">+91 9972120119</a></p>
                             </div>
                         </div>
                         <div class="partner-info-item">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope-open-text"></i>
                             <div class="partner-info-text">
-                                <h4>Email</h4>
+                                <h4>Direct Email</h4>
                                 <p><a href="mailto:prasadgowda.m@gmail.com">prasadgowda.m@gmail.com</a></p>
                             </div>
                         </div>
+                        <div class="partner-info-item">
+                            <i class="fas fa-industry"></i>
+                            <div class="partner-info-text">
+                                <h4>Established Quality</h4>
+                                <p>Operational since <strong>2009</strong> with state-of-the-art RO purification, precision automated filling, and strict compliance with Bureau of Indian Standards (ISI) and FSSAI.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="partner-card-actions">
+                        <a href="tel:9972120119" class="btn btn-action-pill btn-call">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20your%20beverage%20bottling%20and%20products." target="_blank" class="btn btn-action-pill btn-wa">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="mailto:prasadgowda.m@gmail.com" class="btn btn-action-pill btn-email">
+                            <i class="fas fa-envelope"></i> Email Us
+                        </a>
+                        <a href="https://maps.google.com/?q=B.N.+Road,+Gundlupet,+Karnataka+571111" target="_blank" class="btn btn-action-pill btn-nav">
+                            <i class="fas fa-location-arrow"></i> Directions
+                        </a>
                     </div>
                 </div>
 
                 <!-- QR Card -->
-                <div class="qr-card">
-                    <h3 class="qr-title">Contact QR Code</h3>
-                    <p class="qr-subtitle">Scan using your smartphone camera to save the partner's contact details directly to your address book.</p>
+                <div class="qr-card animate-hidden">
+                    <div class="qr-licensee-seal">
+                        <i class="fas fa-shield-halved"></i>
+                        <span>OFFICIAL CERTIFIED BOTTLER</span>
+                    </div>
+                    <h3 class="qr-title">Instant Digital vCard</h3>
+                    <p class="qr-subtitle">Point your phone camera to quickly save verified partner details directly into your contact book.</p>
                     
                     <div class="qr-code-wrapper">
                         <div id="qrcode"></div>
                     </div>
 
-                    <button id="download-qr-btn" class="btn btn-download">
-                        <i class="fas fa-download"></i> Download QR Card (PNG)
-                    </button>
-                    <a href="assets/Thirumala_Industries_Contact_Card.pdf" download="Thirumala_Industries_Contact_Card.pdf" class="btn btn-download" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; background-color: var(--secondary-color); margin-top: 10px; width: 100%;">
-                        <i class="fas fa-file-pdf"></i> Download QR Card (PDF)
-                    </a>
-                    <canvas id="qr-download-canvas" width="600" height="850"></canvas>
+                    <div class="qr-contact-preview">
+                        <div class="qcp-row"><i class="fas fa-user-tie"></i> <span><strong>Contact:</strong> Prasad Gowda M</span></div>
+                        <div class="qcp-row"><i class="fas fa-phone"></i> <span><strong>Mobile:</strong> +91 9972120119</span></div>
+                        <div class="qcp-row"><i class="fas fa-clock"></i> <span><strong>Plant Hours:</strong> Mon&ndash;Sat: 8 AM &ndash; 7:30 PM</span></div>
+                    </div>
+
+                    <div class="qr-buttons-group">
+                        <button id="download-qr-btn" class="btn btn-download">
+                            <i class="fas fa-download"></i> Download QR Card (PNG)
+                        </button>
+                        <a href="assets/Thirumala_Industries_Contact_Card.pdf" download="Thirumala_Industries_Contact_Card.pdf" class="btn btn-action-outline">
+                            <i class="fas fa-file-pdf"></i> Download Official PDF
+                        </a>
+                    </div>
+                    <canvas id="qr-download-canvas" width="600" height="940" style="display: none;"></canvas>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manufactured Products Portfolio Section -->
+    <section class="section partner-products-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Production Line Portfolio</span>
+                <h2>Manufactured Products &amp; Packaging Lineup</h2>
+                <p>Comprehensive beverage bottling range produced by Thirumala Industries (Started in 2009) meeting certified purity and safety benchmarks.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="partner-products-grid">
+                <!-- Product 1: Drizzle Valley (Greaton Signature Product) -->
+                <div class="partner-product-card featured-greaton animate-hidden">
+                    <div class="partner-product-badge">
+                        <i class="fas fa-star"></i> Official Greaton Product
+                    </div>
+                    <div class="pp-image-wrap">
+                        <img src="assets/drizzle_valley_1L_labeled.jpg" alt="Drizzle Valley 1 Litre Packaged Drinking Water" class="pp-img" loading="lazy">
+                        <span class="pp-vol-tag"><i class="fas fa-droplet"></i> 1000ml (1 Litre)</span>
+                    </div>
+                    <div class="partner-product-header">
+                        <div class="pp-icon water-icon"><i class="fas fa-droplet"></i></div>
+                        <div>
+                            <h3>Drizzle Valley</h3>
+                            <span class="pp-category">Packaged Drinking Water</span>
+                        </div>
+                    </div>
+                    <p class="pp-desc">The flagship packaged drinking water for Greaton Food Products. Treated through a meticulous 7-stage RO + UV + Ozone purification cycle with natural mineral balance for daily hydration.</p>
+                    <div class="pp-specs">
+                        <div class="pp-spec-row">
+                            <span class="spec-label"><i class="fas fa-bottle-water"></i> Available Capacity:</span>
+                            <div class="spec-pills">
+                                <span class="spec-pill highlight">1 Litre (1000ml)</span>
+                            </div>
+                        </div>
+                        <div class="pp-spec-row">
+                            <span class="spec-label"><i class="fas fa-certificate"></i> Certification:</span>
+                            <span class="spec-val">ISI Certified (IS 14543) • FSSAI Approved</span>
+                        </div>
+                    </div>
+                    <div class="pp-footer-action">
+                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20supply%20for%20Drizzle%20Valley%201L%20Packaged%20Water." target="_blank" class="btn-product-inquire">
+                            <i class="fab fa-whatsapp"></i> Inquire Supply
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 2: Unique Packaged Drinking Water -->
+                <div class="partner-product-card animate-hidden">
+                    <div class="partner-product-badge badge-blue">
+                        <i class="fas fa-water"></i> Multi-Capacity Range
+                    </div>
+                    <div class="pp-image-wrap">
+                        <img src="assets/partner-unique-lineup.jpg" alt="Unique Packaged Drinking Water Lineup 500ml, 1L, 2L, 5L" class="pp-img" loading="lazy">
+                        <span class="pp-vol-tag"><i class="fas fa-boxes-stacked"></i> 500ml to 5 Litres</span>
+                    </div>
+                    <div class="partner-product-header">
+                        <div class="pp-icon water-icon"><i class="fas fa-faucet-drip"></i></div>
+                        <div>
+                            <h3>Unique</h3>
+                            <span class="pp-category">Packaged Drinking Water</span>
+                        </div>
+                    </div>
+                    <p class="pp-desc">A versatile, trusted packaged drinking water brand packaged across versatile sizing options for personal carry, retail, family celebrations, and bulk institutional consumption.</p>
+                    <div class="pp-specs">
+                        <div class="pp-spec-row">
+                            <span class="spec-label"><i class="fas fa-boxes-stacked"></i> Available Sizes:</span>
+                            <div class="spec-pills">
+                                <span class="spec-pill">500ml</span>
+                                <span class="spec-pill">1 Litre</span>
+                                <span class="spec-pill">2 Litre</span>
+                                <span class="spec-pill highlight">5 Litre (Bulk)</span>
+                            </div>
+                        </div>
+                        <div class="pp-spec-row">
+                            <span class="spec-label"><i class="fas fa-recycle"></i> Bottle Grade:</span>
+                            <span class="spec-val">100% Recyclable Food-Grade PET</span>
+                        </div>
+                    </div>
+                    <div class="pp-footer-action">
+                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20supply%20for%20Unique%20Packaged%20Water%20(500ml,%201L,%202L,%205L)." target="_blank" class="btn-product-inquire">
+                            <i class="fab fa-whatsapp"></i> Inquire Supply
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 3: Bisley Sparkling Soda -->
+                <div class="partner-product-card animate-hidden">
+                    <div class="partner-product-badge badge-red">
+                        <i class="fas fa-bolt"></i> Crisp Effervescence
+                    </div>
+                    <div class="pp-image-wrap">
+                        <img src="assets/partner-bisley-soda.jpg" alt="Bisley Sparkling Club Soda 600ml and 1 Litre" class="pp-img" loading="lazy">
+                        <span class="pp-vol-tag"><i class="fas fa-bolt"></i> 600ml &bull; 1 Litre</span>
+                    </div>
+                    <div class="partner-product-header">
+                        <div class="pp-icon soda-icon"><i class="fas fa-champagne-glasses"></i></div>
+                        <div>
+                            <h3>Bisley Soda</h3>
+                            <span class="pp-category">Sparkling Club Soda</span>
+                        </div>
+                    </div>
+                    <p class="pp-desc">Extra-fizzy, carbonated club soda formulated with long-lasting effervescent bubbles. Perfect as a standalone chilled refresher or as a mixer for drinks and parties.</p>
+                    <div class="pp-specs">
+                        <div class="pp-spec-row">
+                            <span class="spec-label"><i class="fas fa-bottle-droplet"></i> Available Sizes:</span>
+                            <div class="spec-pills">
+                                <span class="spec-pill">600ml Single</span>
+                                <span class="spec-pill">1 Litre Party</span>
+                            </div>
+                        </div>
+                        <div class="pp-spec-row">
+                            <span class="spec-label"><i class="fas fa-wand-magic-sparkles"></i> Feature:</span>
+                            <span class="spec-val">Long-Lasting Bubbles • Zero Calorie</span>
+                        </div>
+                    </div>
+                    <div class="pp-footer-action">
+                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20supply%20for%20Bisley%20Club%20Soda%20(600ml,%201L)." target="_blank" class="btn-product-inquire">
+                            <i class="fab fa-whatsapp"></i> Inquire Supply
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product 4: Bisley Carbonated Drinks -->
+                <div class="partner-product-card animate-hidden">
+                    <div class="partner-product-badge badge-orange">
+                        <i class="fas fa-lemon"></i> Zesty Citrus Flavors
+                    </div>
+                    <div class="pp-image-wrap">
+                        <img src="assets/partner-bisley-drinks.jpg" alt="Bisley Lemon and Orange Carbonated Drinks 200ml" class="pp-img" loading="lazy">
+                        <span class="pp-vol-tag"><i class="fas fa-lemon"></i> 200ml Quick-Sip</span>
+                    </div>
+                    <div class="partner-product-header">
+                        <div class="pp-icon drink-icon"><i class="fas fa-glass-water-droplet"></i></div>
+                        <div>
+                            <h3>Bisley Carbonated Drink</h3>
+                            <span class="pp-category">Carbonated Fruit Beverage</span>
+                        </div>
+                    </div>
+                    <p class="pp-desc">Delicious, sparkling carbonated fruit beverages bursting with vibrant tanginess. Refreshing thirst quencher designed for quick consumption and festive celebrations.</p>
+                    <div class="pp-specs">
+                        <div class="pp-spec-row">
+                            <span class="spec-label"><i class="fas fa-tags"></i> Flavors:</span>
+                            <div class="spec-pills">
+                                <span class="spec-pill flavor-lemon"><i class="fas fa-lemon"></i> Lemon</span>
+                                <span class="spec-pill flavor-orange"><i class="fas fa-sun"></i> Orange</span>
+                            </div>
+                        </div>
+                        <div class="pp-spec-row">
+                            <span class="spec-label"><i class="fas fa-cube"></i> Available Size:</span>
+                            <div class="spec-pills">
+                                <span class="spec-pill highlight">200ml Quick-Sip</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pp-footer-action">
+                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20supply%20for%20Bisley%20Carbonated%20Drink%20(Lemon%20&%20Orange%20200ml)." target="_blank" class="btn-product-inquire">
+                            <i class="fab fa-whatsapp"></i> Inquire Supply
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality & Bottling Process Section -->
+    <section class="section partner-process-section" id="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Quality Engineering</span>
+                <h2>4-Stage Production Standard</h2>
+                <p>From deep-source mineral water to precision automated bottling, our production follows strict ISO, ISI, and FSSAI protocols.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-step-card animate-hidden">
+                    <div class="process-step-badge">01</div>
+                    <h3>Source Extraction &amp; Pre-Filtration</h3>
+                    <p>Protected source water passes through automated dual-media sand filters and activated carbon absorbers to eliminate particulate sediment and turbidity.</p>
+                </div>
+
+                <div class="process-step-card animate-hidden">
+                    <div class="process-step-badge">02</div>
+                    <h3>7-Stage RO + UV + Ozone</h3>
+                    <p>High-pressure reverse osmosis membranes remove dissolved solids. Sub-micron cartridge filters, UV sterilization lamps, and natural ozone ensure biological purity.</p>
+                </div>
+
+                <div class="process-step-card animate-hidden">
+                    <div class="process-step-badge">03</div>
+                    <h3>Automated Zero-Touch Bottling</h3>
+                    <p>Cleanroom blow molding, sanitized bottle rinsing, precision volumetric filling, and airtight tamper-evident capping with zero human contact.</p>
+                </div>
+
+                <div class="process-step-card animate-hidden">
+                    <div class="process-step-badge">04</div>
+                    <h3>Batch Lab Testing &amp; Dispatch</h3>
+                    <p>Every single production batch undergoes in-house microbiological and physicochemical assays verifying IS 14543 compliance before regional transport.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Factory Location & Infrastructure Section -->
+    <section class="section bg-light partner-facility-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Manufacturing Hub</span>
+                <h2>Gundlupet Bottling Facility</h2>
+                <p>Strategically situated on B.N. Road, Gundlupet near the Kerala&ndash;Karnataka border, offering high-throughput production and rapid distribution connectivity.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="facility-grid">
+                <!-- Facility Highlights -->
+                <div class="facility-highlights-card animate-hidden">
+                    <h3>Facility Specifications &amp; Capabilities</h3>
+                    <ul class="facility-specs-list">
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <div>
+                                <strong>Operational Heritage (Estd. 2009)</strong>
+                                <p>15+ years of continuous bottling excellence, trusted by leading regional brands and distributors.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <div>
+                                <strong>7-Stage RO &amp; Micro-Purification</strong>
+                                <p>Multi-barrier sand filtration, activated carbon, micron polishing, UV disinfection, and ozonation ensuring 100% pure drinking water.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <div>
+                                <strong>Automated High-Speed Bottling Lines</strong>
+                                <p>Non-contact filling and capping lines engineered for 500ml, 1L, 2L, 5L waters, crisp club sodas, and carbonated fruit beverages.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-circle-check"></i>
+                            <div>
+                                <strong>Statutory &amp; Quality Certifications</strong>
+                                <p>Certified under Bureau of Indian Standards (ISI IS 14543) and fully licensed by FSSAI.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="facility-quick-contact">
+                        <div class="fqc-item">
+                            <i class="fas fa-building-circle-check"></i>
+                            <span><strong>Address:</strong> Assement No: 286, 1st Division, B.N. Road, Near Sales Tax Office, Gundlupet - 571111</span>
+                        </div>
+                        <div class="fqc-item">
+                            <i class="fas fa-headset"></i>
+                            <span><strong>Contact:</strong> Tel: <a href="tel:9972120119">+91 9972120119</a> &bull; Email: <a href="mailto:prasadgowda.m@gmail.com">prasadgowda.m@gmail.com</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Map Iframe Card -->
+                <div class="facility-map-card animate-hidden">
+                    <div class="facility-map-header">
+                        <div class="map-badge"><i class="fas fa-map-pin"></i> Gundlupet, Chamarajanagar Dist - 571111</div>
+                        <a href="https://maps.google.com/?q=B.N.+Road,+Gundlupet,+Karnataka+571111" target="_blank" class="map-open-link">
+                            Open in Google Maps <i class="fas fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                    <div class="partner-map-container">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=B.N.+Road,+Gundlupet,+Karnataka+571111&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="380" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Thirumala Industries Production Facility Location">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Supply Enquiry Section -->
+    <section class="section partner-inquiry-section">
+        <div class="container">
+            <div class="partner-inquiry-box animate-hidden">
+                <div class="inquiry-header text-center">
+                    <span class="section-tag">Direct Commercial Connect</span>
+                    <h2>Partner Bottling &amp; Supply Inquiry</h2>
+                    <p>Request bulk supply quotes, dealership distribution, or contract bottling directly with Thirumala Industries &amp; Greaton Food Products.</p>
+                    <div class="divider"></div>
+                </div>
+
+                <form class="partner-inquiry-form" id="partner-inquiry-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Full Name / Business Name *</label>
+                            <input type="text" id="pi-name" placeholder="e.g. Ramesh Kumar / Star Supermarket" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-phone"></i> Phone Number *</label>
+                            <input type="tel" id="pi-phone" placeholder="e.g. +91 98765 43210" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Email Address</label>
+                            <input type="email" id="pi-email" placeholder="e.g. ramesh@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-boxes-stacked"></i> Product Line of Interest *</label>
+                            <select id="pi-product" required>
+                                <option value="" disabled selected>Select Product Line</option>
+                                <option value="Drizzle Valley 1L (Packaged Drinking Water)">Drizzle Valley 1 Litre (Greaton Flagship Packaged Water)</option>
+                                <option value="Unique Packaged Water (500ml, 1L, 2L, 5L)">Unique Packaged Water (500ml, 1L, 2L, 5L)</option>
+                                <option value="Bisley Sparkling Soda (600ml, 1L)">Bisley Sparkling Club Soda (600ml, 1L)</option>
+                                <option value="Bisley Carbonated Drink (Lemon & Orange 200ml)">Bisley Carbonated Drink (Lemon &amp; Orange 200ml)</option>
+                                <option value="Complete Beverage Portfolio">Full Portfolio (Water, Soda &amp; Carbonated Drinks)</option>
+                                <option value="Contract / Institutional Bottling">Contract / Institutional Bottling</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-comment-dots"></i> Estimated Requirement / Message</label>
+                        <textarea id="pi-message" rows="3" placeholder="Specify estimated order quantity, delivery town/location, or specific questions..."></textarea>
+                    </div>
+                    <div class="form-submit-actions">
+                        <button type="submit" class="btn btn-primary btn-submit-inquiry">
+                            <i class="fab fa-whatsapp"></i> Send Inquiry via WhatsApp
+                        </button>
+                        <a href="tel:9972120119" class="btn btn-outline">
+                            <i class="fas fa-phone-volume"></i> Direct Call: 9972120119
+                        </a>
+                    </div>
+                    <div id="pi-status" class="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner FAQ Section -->
+    <section class="section partner-faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Partner Knowledge Base</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Commercial answers for wholesalers, supermarket retailers, distributors, and event organizers.</p>
+                <div class="divider"></div>
+            </div>
+
+            <div class="faq-container animate-hidden">
+                <details class="faq-item" open>
+                    <summary class="faq-summary">
+                        <span>What is the minimum order quantity (MOQ) for supply?</span>
+                    </summary>
+                    <div class="faq-body">
+                        We accommodate both local retail orders and bulk institutional supply. Standard distribution starts from 50 cases for mixed orders (Drizzle Valley 1L, Unique 500ml/1L/2L, Bisley Soda, and Bisley Carbonated Drinks). Full truckload (FTL) deliveries are available across Kerala and Karnataka.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        <span>Which regions are covered by Thirumala Industries' direct fleet?</span>
+                    </summary>
+                    <div class="faq-body">
+                        Operating from our Gundlupet border hub, our dedicated distribution fleet delivers daily across Wayanad (Sulthan Bathery, Kalpetta, Mananthavady), Kozhikode, Malappuram in Kerala, and Gundlupet, Chamarajanagar, Nanjangud, and Mysuru in Karnataka.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        <span>Are custom private labeling or event contract bottling services available?</span>
+                    </summary>
+                    <div class="faq-body">
+                        Yes. Thirumala Industries provides certified contract packaging and co-packing for hotel chains, restaurants, resorts, marriage conventions, and corporate events with custom-branded labels adhering to ISI and FSSAI statutory standards.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        <span>How is batch water purity tested and verified?</span>
+                    </summary>
+                    <div class="faq-body">
+                        Our facility features an in-house laboratory where trained technicians monitor pH, TDS, turbidity, conductivity, and bacterial counts daily. Every batch meets Bureau of Indian Standards (IS 14543) specifications and undergoes periodic third-party accredited audits.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -129,67 +751,71 @@
             <div class="footer-grid">
                 <div class="footer-col about">
                     <h3>Greaton</h3>
-                    <p>Delivering purity and taste to every household in Wayanad. Water, Soda, and Juices you can trust.</p>
+                    <p>Delivering pure drinking water, refreshing sparkling sodas, and wholesome natural fruit juices across Wayanad with uncompromising quality.</p>
                 </div>
+                
                 <div class="footer-col links">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html#home">Home</a></li>
                         <li><a href="index.html#about">About Us</a></li>
                         <li><a href="index.html#products">Products</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
                         <li><a href="partners.html">Partners</a></li>
-                        <li><a href="barcodes.html">Barcodes</a></li>
                         <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col contact">
                     <h3>Get in Touch</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Kaniyambetta, Wayanad</p>
+                    <p><i class="fas fa-location-dot"></i> Kaniyambetta, Wayanad</p>
                     <p><i class="fas fa-phone"></i> +91 9072119994</p>
                     <p><i class="fas fa-envelope"></i> info@greaton.co.in</p>
                 </div>
+                
                 <div class="footer-col newsletter">
                     <h3>Stay Updated</h3>
-                    <p>Subscribe for latest products and offers.</p>
+                    <p>Subscribe for product launches and distribution offers.</p>
                     <form class="newsletter-form">
-                        <input type="email" placeholder="Your Email">
-                        <button type="button"><i class="fas fa-paper-plane"></i></button>
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="button" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
                     </form>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919072119994" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Greaton Food Products. All Rights Reserved.</p>
+                <p>&copy; 2025–2026 Greaton Food Products. All Rights Reserved. Crafted with Purity.</p>
             </div>
         </div>
     </footer>
 
     <!-- Chat Widget -->
-    <button id="chat-widget-btn" class="chat-widget-btn">
+    <button id="chat-widget-btn" class="chat-widget-btn" aria-label="Open Instant Chat">
         <i class="fas fa-comment-dots"></i>
     </button>
 
-    <div id="chat-popup" class="chat-popup">
+    <div id="chat-popup" class="chat-popup" role="dialog" aria-modal="true" aria-label="Contact Chat">
         <div class="chat-header">
             <div class="chat-header-actions">
-                <button id="close-chat" class="close-chat"><i class="fas fa-chevron-down"></i></button>
+                <button id="close-chat" class="close-chat" aria-label="Close Chat"><i class="fas fa-xmark"></i></button>
             </div>
             <div class="chat-title">
-                <h3>Contact Us</h3>
+                <h3>Greaton Assistant</h3>
                 <div class="chat-avatar">
-                   <i class="fas fa-user-circle"></i>
+                   <i class="fas fa-circle-user"></i>
                 </div>
-                <p>We'll respond as soon as we can.</p>
+                <p>We typically respond in minutes.</p>
             </div>
         </div>
         <div class="chat-body" id="chat-body">
             <div class="message received">
                 <div class="message-content">
-                    <p>Let me know if you have any questions!</p>
+                    <p>Hello! Let us know if you need any production or partnership details.</p>
                 </div>
                 <span class="timestamp">Just now</span>
             </div>
@@ -197,212 +823,240 @@
         <div class="chat-footer">
             <form id="chat-form">
                 <div class="input-row">
-                    <input type="tel" id="chat-phone" placeholder="Phone Number" required>
+                    <input type="tel" id="chat-phone" placeholder="Your Phone Number *" required>
                 </div>
                 <div class="input-row">
                     <input type="email" id="chat-email" placeholder="Email (Optional)">
                 </div>
                 <div class="input-group">
-                    <input type="text" id="chat-input" placeholder="Message..." autocomplete="off">
-                    <button type="submit" id="send-btn"><i class="fas fa-paper-plane"></i></button>
+                    <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off">
+                    <button type="submit" id="send-btn" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- QR Code Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nOMQVqgTC8+2uqDIxDYLD5GQN5ReWlmny+im4EFmsvyUYLCXGDm/JES3Zo151g5y2QtHLdUt8MRg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- Main Script (handles particles, mobile menu, chat) -->
-    <script src="script.js"></script>
+    <!-- QR Code Library (Local Bundle with CDN Fallback) -->
+    <script src="assets/qrcode.min.js"></script>
+    <script>
+        if (typeof QRCode === 'undefined') {
+            document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"><\/script>');
+        }
+    </script>
+    <script src="script.js?v=2.9"></script>
 
-    <!-- Partners-Specific Dynamic QR & Canvas Script -->
+    <!-- Dynamic QR & Canvas Script with Red Theme Palette -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Thirumala Industries Contact Details in VCard 3.0 Format
             const vcardData = `BEGIN:VCARD
 VERSION:3.0
 FN:THIRUMALA INDUSTRIES
 ORG:THIRUMALA INDUSTRIES
-TITLE:Production Partner
+TITLE:Production Partner (Estd. 2009)
 TEL;TYPE=WORK,VOICE:9972120119
 EMAIL;TYPE=PREF,INTERNET:prasadgowda.m@gmail.com
 ADR;TYPE=WORK:;;ASSEMENT NO :286, 1ST DIVISION, B.N. ROAD, NEAR SALES TAX OFFICE;GUNDLUPET;CHAMARAJANAGAR DIST;571111;India
-NOTE:Production Partner for Greaton Food Products
+NOTE:Production Partner for Greaton Food Products (Started in 2009). Products: Unique Water (500ml, 1L, 2L, 5L), Drizzle Valley 1L, Bisley Soda (600ml, 1L), Bisley Carbonated Drinks (Lemon & Orange 200ml).
 END:VCARD`;
 
-            // Initialize QR Code
             const qrcodeContainer = document.getElementById("qrcode");
-            const qrcode = new QRCode(qrcodeContainer, {
-                text: vcardData,
-                width: 200,
-                height: 200,
-                colorDark: "#263238", // matches var(--text-dark) slate/navy grey
-                colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.H
-            });
+            if (qrcodeContainer && typeof QRCode !== 'undefined') {
+                try {
+                    new QRCode(qrcodeContainer, {
+                        text: vcardData,
+                        width: 200,
+                        height: 200,
+                        colorDark: "#0F172A",
+                        colorLight: "#ffffff",
+                        correctLevel: (QRCode.CorrectLevel && QRCode.CorrectLevel.H) || 2
+                    });
+                } catch (e) {
+                    console.warn("QRCode initialization error:", e);
+                }
+            }
 
-            // Download Premium Business Card
             const downloadBtn = document.getElementById("download-qr-btn");
-            downloadBtn.addEventListener("click", () => {
-                const originalText = downloadBtn.innerHTML;
-                downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
-                downloadBtn.disabled = true;
+            if (downloadBtn) {
+                downloadBtn.addEventListener("click", () => {
+                    const originalText = downloadBtn.innerHTML;
+                    downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+                    downloadBtn.disabled = true;
 
-                // Let the UI render the spinner before blocking CPU execution
-                setTimeout(() => {
-                    try {
-                        const canvas = document.getElementById("qr-download-canvas");
-                        const ctx = canvas.getContext("2d");
-                        
-                        // Set canvas size (sharper rendering)
-                        canvas.width = 600;
-                        canvas.height = 850;
-                        
-                        // 1. Draw Card Background
-                        ctx.fillStyle = "#ffffff";
-                        ctx.fillRect(0, 0, canvas.width, canvas.height);
-                        
-                        // Elegant Outer Border
-                        ctx.strokeStyle = "#0288D1"; // var(--primary-color)
-                        ctx.lineWidth = 14;
-                        ctx.strokeRect(7, 7, canvas.width - 14, canvas.height - 14);
-                        
-                        // Slate Inner Border
-                        ctx.strokeStyle = "#455A64"; // var(--secondary-color)
-                        ctx.lineWidth = 2;
-                        ctx.strokeRect(22, 22, canvas.width - 44, canvas.height - 44);
-                        
-                        // 2. Draw Greaton Header Branding
-                        ctx.textAlign = "center";
-                        ctx.fillStyle = "#0288D1";
-                        ctx.font = "bold 32px 'Poppins', sans-serif";
-                        ctx.fillText("GREATON FOOD PRODUCTS", canvas.width / 2, 85);
-                        
-                        ctx.fillStyle = "#455A64";
-                        ctx.font = "italic 18px 'Poppins', sans-serif";
-                        ctx.fillText("Refreshing Life", canvas.width / 2, 115);
-                        
-                        // Branded Separator Line
-                        ctx.beginPath();
-                        ctx.moveTo(50, 140);
-                        ctx.lineTo(canvas.width - 50, 140);
-                        ctx.strokeStyle = "#ECEFF1"; // var(--bg-light)
-                        ctx.lineWidth = 3;
-                        ctx.stroke();
-                        
-                        // 3. Draw Production Partner Badge
-                        const badgeWidth = 240;
-                        const badgeHeight = 36;
-                        const badgeX = (canvas.width - badgeWidth) / 2;
-                        const badgeY = 165;
-                        
-                        ctx.fillStyle = "#0288D1";
-                        drawRoundRect(ctx, badgeX, badgeY, badgeWidth, badgeHeight, 18);
-                        ctx.fill();
-                        
-                        ctx.fillStyle = "#ffffff";
-                        ctx.font = "bold 13px 'Poppins', sans-serif";
-                        ctx.fillText("PRODUCTION PARTNER", canvas.width / 2, badgeY + 22);
-                        
-                        // 4. Partner Name
-                        ctx.fillStyle = "#263238";
-                        ctx.font = "bold 32px 'Poppins', sans-serif";
-                        ctx.fillText("THIRUMALA INDUSTRIES", canvas.width / 2, 255);
-                        
-                        // Blue Accent line
-                        ctx.beginPath();
-                        ctx.moveTo(150, 280);
-                        ctx.lineTo(canvas.width - 150, 280);
-                        ctx.strokeStyle = "#0288D1";
-                        ctx.lineWidth = 2;
-                        ctx.stroke();
-                        
-                        // 5. Contact Details Text
-                        ctx.fillStyle = "#455A64";
-                        ctx.font = "bold 15px 'Poppins', sans-serif";
-                        ctx.fillText("OFFICE ADDRESS", canvas.width / 2, 315);
-                        
-                        ctx.fillStyle = "#263238";
-                        ctx.font = "500 15px 'Poppins', sans-serif";
-                        ctx.fillText("ASSEMENT NO :286, 1ST DIVISION, B.N. ROAD,", canvas.width / 2, 340);
-                        ctx.fillText("NEAR SALES TAX OFFICE, GUNDLUPET,", canvas.width / 2, 365);
-                        ctx.fillText("CHAMARAJANAGAR DIST - 571111", canvas.width / 2, 390);
-                        
-                        ctx.fillStyle = "#455A64";
-                        ctx.font = "bold 15px 'Poppins', sans-serif";
-                        ctx.fillText("CONTACT DETAILS", canvas.width / 2, 440);
-                        
-                        ctx.fillStyle = "#263238";
-                        ctx.font = "500 16px 'Poppins', sans-serif";
-                        ctx.fillText("Tel: +91 9972120119", canvas.width / 2, 465);
-                        ctx.fillText("Email: prasadgowda.m@gmail.com", canvas.width / 2, 490);
-                        
-                        // 6. Draw QR Code
-                        const qrCanvas = qrcodeContainer.querySelector("canvas");
-                        const qrImg = qrcodeContainer.querySelector("img");
-                        
-                        const executeDownload = (qrSource) => {
-                            const qrSize = 220;
-                            const qrX = (canvas.width - qrSize) / 2;
-                            const qrY = 535;
+                    setTimeout(() => {
+                        try {
+                            const canvas = document.getElementById("qr-download-canvas");
+                            const ctx = canvas.getContext("2d");
                             
-                            // Shadow Card frame for QR code
-                            ctx.shadowColor = "rgba(0, 0, 0, 0.08)";
-                            ctx.shadowBlur = 15;
-                            ctx.shadowOffsetY = 5;
+                            canvas.width = 600;
+                            canvas.height = 940;
+                            
+                            // Background
                             ctx.fillStyle = "#ffffff";
-                            drawRoundRect(ctx, qrX - 15, qrY - 15, qrSize + 30, qrSize + 30, 16);
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+                            
+                            // Outer Crimson Red Border
+                            ctx.strokeStyle = "#E50914";
+                            ctx.lineWidth = 14;
+                            ctx.strokeRect(7, 7, canvas.width - 14, canvas.height - 14);
+                            
+                            // Inner Slate Border
+                            ctx.strokeStyle = "#1E293B";
+                            ctx.lineWidth = 2;
+                            ctx.strokeRect(22, 22, canvas.width - 44, canvas.height - 44);
+                            
+                            // Header
+                            ctx.textAlign = "center";
+                            ctx.fillStyle = "#E50914";
+                            ctx.font = "bold 28px 'Poppins', sans-serif";
+                            ctx.fillText("GREATON FOOD PRODUCTS", canvas.width / 2, 72);
+                            
+                            ctx.fillStyle = "#64748B";
+                            ctx.font = "italic 15px 'Poppins', sans-serif";
+                            ctx.fillText("Pure. Refreshing. Life.", canvas.width / 2, 98);
+                            
+                            // Divider Line
+                            ctx.beginPath();
+                            ctx.moveTo(50, 118);
+                            ctx.lineTo(canvas.width - 50, 118);
+                            ctx.strokeStyle = "#F1F5F9";
+                            ctx.lineWidth = 2;
+                            ctx.stroke();
+                            
+                            // Partner Badge (Estd 2009)
+                            const badgeWidth = 290;
+                            const badgeHeight = 32;
+                            const badgeX = (canvas.width - badgeWidth) / 2;
+                            const badgeY = 136;
+                            
+                            ctx.fillStyle = "#E50914";
+                            drawRoundRect(ctx, badgeX, badgeY, badgeWidth, badgeHeight, 16);
                             ctx.fill();
                             
-                            // Reset Shadows
-                            ctx.shadowColor = "transparent";
-                            ctx.shadowBlur = 0;
-                            ctx.shadowOffsetY = 0;
+                            ctx.fillStyle = "#ffffff";
+                            ctx.font = "bold 12px 'Poppins', sans-serif";
+                            ctx.fillText("PRODUCTION PARTNER • ESTD. 2009", canvas.width / 2, badgeY + 21);
                             
-                            // Draw QR
-                            ctx.drawImage(qrSource, qrX, qrY, qrSize, qrSize);
+                            // Partner Title
+                            ctx.fillStyle = "#0F172A";
+                            ctx.font = "bold 28px 'Poppins', sans-serif";
+                            ctx.fillText("THIRUMALA INDUSTRIES", canvas.width / 2, 212);
                             
-                            // Branded Card Footer
-                            ctx.fillStyle = "#0288D1";
+                            ctx.beginPath();
+                            ctx.moveTo(160, 226);
+                            ctx.lineTo(canvas.width - 160, 226);
+                            ctx.strokeStyle = "#E50914";
+                            ctx.lineWidth = 2;
+                            ctx.stroke();
+                            
+                            // Address Details
+                            ctx.fillStyle = "#E50914";
                             ctx.font = "bold 13px 'Poppins', sans-serif";
-                            ctx.fillText("SCAN TO SAVE CONTACT DETAILS", canvas.width / 2, 800);
+                            ctx.fillText("FACILITY ADDRESS", canvas.width / 2, 256);
                             
-                            ctx.fillStyle = "#455A64";
+                            ctx.fillStyle = "#0F172A";
+                            ctx.font = "500 14px 'Poppins', sans-serif";
+                            ctx.fillText("ASSEMENT NO :286, 1ST DIVISION, B.N. ROAD,", canvas.width / 2, 278);
+                            ctx.fillText("NEAR SALES TAX OFFICE, GUNDLUPET,", canvas.width / 2, 298);
+                            ctx.fillText("CHAMARAJANAGAR DIST - 571111", canvas.width / 2, 318);
+                            
+                            // Contact Details
+                            ctx.fillStyle = "#E50914";
+                            ctx.font = "bold 13px 'Poppins', sans-serif";
+                            ctx.fillText("CONTACT SUPPORT", canvas.width / 2, 348);
+                            
+                            ctx.fillStyle = "#0F172A";
+                            ctx.font = "500 14px 'Poppins', sans-serif";
+                            ctx.fillText("Tel: +91 9972120119  •  Email: prasadgowda.m@gmail.com", canvas.width / 2, 370);
+                            
+                            // Products Box
+                            const pBoxX = 50;
+                            const pBoxY = 398;
+                            const pBoxW = canvas.width - 100;
+                            const pBoxH = 145;
+                            ctx.fillStyle = "#F8FAFC";
+                            drawRoundRect(ctx, pBoxX, pBoxY, pBoxW, pBoxH, 12);
+                            ctx.fill();
+                            ctx.strokeStyle = "#E2E8F0";
+                            ctx.lineWidth = 1.5;
+                            ctx.stroke();
+                            
+                            ctx.fillStyle = "#E50914";
+                            ctx.font = "bold 12px 'Poppins', sans-serif";
+                            ctx.fillText("LICENSED BEVERAGE PORTFOLIO", canvas.width / 2, pBoxY + 25);
+                            
+                            ctx.textAlign = "left";
+                            ctx.font = "600 12px 'Poppins', sans-serif";
+                            ctx.fillStyle = "#0F172A";
+                            ctx.fillText("• Drizzle Valley: 1 Litre (Greaton Flagship Packaged Water)", pBoxX + 22, pBoxY + 54);
+                            
                             ctx.font = "500 12px 'Poppins', sans-serif";
-                            ctx.fillText("Official Partner of Greaton Food Products", canvas.width / 2, 822);
+                            ctx.fillStyle = "#334155";
+                            ctx.fillText("• Unique: 500ml, 1 Ltr, 2 Ltr, 5 Ltr (Packaged Drinking Water)", pBoxX + 22, pBoxY + 78);
+                            ctx.fillText("• Bisley Soda: 600ml, 1 Litre (Sparkling Club Soda)", pBoxX + 22, pBoxY + 102);
+                            ctx.fillText("• Bisley Carbonated Drinks: Lemon & Orange (200ml)", pBoxX + 22, pBoxY + 126);
+                            ctx.textAlign = "center";
                             
-                            // Trigger Download with DOM-attached Link for Safari/Firefox support
-                            const image = canvas.toDataURL("image/png");
-                            const link = document.createElement("a");
-                            link.download = "Thirumala_Industries_Contact_QR.png";
-                            link.href = image;
-                            document.body.appendChild(link);
-                            link.click();
-                            document.body.removeChild(link);
-                        };
+                            // QR Draw
+                            const qrCanvas = qrcodeContainer.querySelector("canvas");
+                            const qrImg = qrcodeContainer.querySelector("img");
+                            
+                            const executeDownload = (qrSource) => {
+                                const qrSize = 180;
+                                const qrX = (canvas.width - qrSize) / 2;
+                                const qrY = 572;
+                                
+                                ctx.shadowColor = "rgba(0, 0, 0, 0.08)";
+                                ctx.shadowBlur = 12;
+                                ctx.shadowOffsetY = 4;
+                                ctx.fillStyle = "#ffffff";
+                                drawRoundRect(ctx, qrX - 12, qrY - 12, qrSize + 24, qrSize + 24, 14);
+                                ctx.fill();
+                                
+                                ctx.shadowColor = "transparent";
+                                ctx.shadowBlur = 0;
+                                ctx.shadowOffsetY = 0;
+                                
+                                ctx.drawImage(qrSource, qrX, qrY, qrSize, qrSize);
+                                
+                                ctx.fillStyle = "#E50914";
+                                ctx.font = "bold 13px 'Poppins', sans-serif";
+                                ctx.fillText("SCAN TO SAVE CONTACT (vCard)", canvas.width / 2, 796);
+                                
+                                ctx.fillStyle = "#64748B";
+                                ctx.font = "500 12px 'Poppins', sans-serif";
+                                ctx.fillText("Official Production Partner of Greaton Food Products", canvas.width / 2, 820);
+                                
+                                ctx.fillStyle = "#94A3B8";
+                                ctx.font = "500 11px 'Poppins', sans-serif";
+                                ctx.fillText("Operational Since 2009 • IS 14543 & FSSAI Certified", canvas.width / 2, 842);
+                                
+                                const image = canvas.toDataURL("image/png");
+                                const link = document.createElement("a");
+                                link.download = "Thirumala_Industries_Contact_QR.png";
+                                link.href = image;
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            };
 
-                        // Select the best available source (canvas is synchronous and always ready)
-                        if (qrCanvas && qrCanvas.width > 0) {
-                            executeDownload(qrCanvas);
-                        } else if (qrImg && qrImg.src && qrImg.complete) {
-                            executeDownload(qrImg);
-                        } else if (qrImg) {
-                            // If image is still loading asynchronously
-                            qrImg.onload = () => executeDownload(qrImg);
-                        } else {
-                            throw new Error("QR Code elements not found");
+                            if (qrCanvas && qrCanvas.width > 0) {
+                                executeDownload(qrCanvas);
+                            } else if (qrImg && qrImg.src && qrImg.complete) {
+                                executeDownload(qrImg);
+                            } else if (qrImg) {
+                                qrImg.onload = () => executeDownload(qrImg);
+                            }
+                        } catch (err) {
+                            console.error("QR Download Error:", err);
+                            alert("Could not generate card image. Please scan the QR code directly from the screen.");
+                        } finally {
+                            downloadBtn.innerHTML = originalText;
+                            downloadBtn.disabled = false;
                         }
-                    } catch (err) {
-                        console.error("QR Download Error:", err);
-                        alert("Could not generate card image. Please scan the QR code directly from the screen.");
-                    } finally {
-                        downloadBtn.innerHTML = originalText;
-                        downloadBtn.disabled = false;
-                    }
-                }, 300);
-            });
+                    }, 300);
+                });
+            }
 
-            // Round rect canvas draw utility
             function drawRoundRect(ctx, x, y, width, height, radius) {
                 ctx.beginPath();
                 ctx.moveTo(x + radius, y);
@@ -415,6 +1069,45 @@ END:VCARD`;
                 ctx.lineTo(x, y + radius);
                 ctx.quadraticCurveTo(x, y, x + radius, y);
                 ctx.closePath();
+            }
+
+            // Partner Supply Enquiry Form Handler (Direct WhatsApp Route)
+            const partnerInquiryForm = document.getElementById("partner-inquiry-form");
+            if (partnerInquiryForm) {
+                partnerInquiryForm.addEventListener("submit", function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById("pi-name").value.trim();
+                    const phone = document.getElementById("pi-phone").value.trim();
+                    const email = document.getElementById("pi-email").value.trim();
+                    const product = document.getElementById("pi-product").value;
+                    const message = document.getElementById("pi-message").value.trim();
+                    const status = document.getElementById("pi-status");
+
+                    if (!name || !phone || !product) {
+                        if (status) {
+                            status.style.display = "block";
+                            status.style.color = "#E50914";
+                            status.textContent = "Please fill in all required fields.";
+                        }
+                        return;
+                    }
+
+                    const waText = `*Greaton & Thirumala Industries - Partner Supply Inquiry*%0A%0A` +
+                        `*Name:* ${encodeURIComponent(name)}%0A` +
+                        `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                        (email ? `*Email:* ${encodeURIComponent(email)}%0A` : '') +
+                        `*Product Line:* ${encodeURIComponent(product)}%0A` +
+                        (message ? `*Requirement:* ${encodeURIComponent(message)}%0A` : '') +
+                        `%0A_Sent via Greaton Platform Partner Portal_`;
+
+                    if (status) {
+                        status.style.display = "block";
+                        status.style.color = "#10B981";
+                        status.textContent = "Opening WhatsApp to send your inquiry directly...";
+                    }
+
+                    window.open(`https://wa.me/919972120119?text=${waText}`, '_blank');
+                });
             }
         });
     </script>

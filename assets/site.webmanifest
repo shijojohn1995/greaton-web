@@ -1,0 +1,31 @@
+{
+  "name": "Greaton Food Products",
+  "short_name": "Greaton",
+  "description": "Pure Packaged Drinking Water, Refreshing Sodas and Natural Orchard Juices from Wayanad, Kerala.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0B0C10",
+  "theme_color": "#E50914",
+  "icons": [
+    {
+      "src": "assets/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
