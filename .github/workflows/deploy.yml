@@ -22,8 +22,10 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          # Path on your hosting server where website files are served:
-          server-dir: public_html/
+          # FTP user root is already set to /public_html, so destination is ./
+          server-dir: ./
+          # Allow connection to shared hosting servers with self-signed/shared SSL certs
+          security: loose
           # Note: If your FTP account root is already set directly inside public_html/, change server-dir to: ./
           exclude: |
             **/.git*
