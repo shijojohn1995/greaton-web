@@ -1,6 +1,11 @@
-# Robots.txt for Greaton Food Products
+# Robots.txt for Greaton Foods & Beverages
 User-agent: *
 Allow: /
 
+User-agent: Googlebot-Favicon
+Allow: /
+Allow: /assets/
+Allow: /favicon.ico
+
 # Sitemaps
-Sitemap: https://greaton.co.in/
+Sitemap: https://greaton.co.in/sitemap.xml
