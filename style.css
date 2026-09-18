@@ -312,11 +312,11 @@ html[data-theme="dark"] .climate-top-bar {
 
 /* Page Spacing with Unified Site Header */
 .has-climate-bar .hero {
-    padding-top: 155px;
+    padding-top: 175px;
 }
 
 .has-climate-bar .partners-hero {
-    padding-top: 135px;
+    padding-top: 160px;
 }
 
 body.no-scroll {
@@ -802,6 +802,7 @@ html[data-theme="dark"] .logo img {
     font-size: 0.9rem;
     font-weight: 600;
     color: #FFFFFF;
+    margin-top: 15px;
     margin-bottom: 25px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     animation: badgePulse 3s infinite ease-in-out;
@@ -3567,11 +3568,20 @@ html[data-theme="dark"] .partner-products-grid::-webkit-scrollbar-track {
     }
     
     .has-climate-bar .hero {
-        padding-top: 145px;
+        padding-top: 185px;
     }
     
     .has-climate-bar .partners-hero {
-        padding-top: 135px;
+        padding-top: 170px;
+    }
+
+    .hero-badge {
+        margin-top: 20px;
+        margin-bottom: 22px;
+        font-size: 0.85rem;
+        padding: 8px 18px;
+        max-width: 92%;
+        line-height: 1.4;
     }
     
     .hero-content h1 {
@@ -3884,6 +3894,23 @@ html[data-theme="dark"] .partner-products-grid::-webkit-scrollbar-track {
 }
 
 @media (max-width: 480px) {
+    .has-climate-bar .hero {
+        padding-top: 195px;
+    }
+    
+    .has-climate-bar .partners-hero {
+        padding-top: 175px;
+    }
+
+    .hero-badge {
+        margin-top: 22px;
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+        padding: 7px 16px;
+        max-width: 95%;
+        line-height: 1.4;
+    }
+
     #climate-weather {
         display: none;
     }
