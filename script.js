@@ -12,10 +12,8 @@
     const THEME_STORAGE_KEY = 'greaton_theme_preference';
 
     function getAutoThemeForCurrentTime() {
-        const hour = new Date().getHours();
-        // 6:00 AM (06:00) to 6:00 PM (18:00) is Daytime -> Light theme
-        // 6:00 PM (18:00) to 6:00 AM (06:00) is Nighttime -> Dark theme
-        return (hour >= 6 && hour < 18) ? 'light' : 'dark';
+        // Auto mode defaults to light theme
+        return 'light';
     }
 
     function updateSignalAndClimate(theme, isManual) {
@@ -74,6 +72,16 @@
 
         updateSignalAndClimate(theme, isManual);
         updateThemeManagerUI(isManual ? theme : 'auto');
+
+        // Swap logo for dark/light theme
+        const logoEl = document.getElementById('site-logo');
+        if (logoEl) {
+            if (theme === 'dark') {
+                logoEl.src = logoEl.src.replace(/logo(-dark)?\.(jpg|png)/, 'logo-dark.png');
+            } else {
+                logoEl.src = logoEl.src.replace(/logo(-dark)?\.(jpg|png)/, 'logo.jpg');
+            }
+        }
     }
 
     function updateThemeManagerUI(activeMode) {
@@ -146,6 +154,39 @@
     window.resetAutoTheme = function () {
         window.setThemeMode('auto');
     };
+
+    // ==========================================
+    // Live Location Detector
+    // ==========================================
+    function updateLocationDisplay(city, state) {
+        const locEl = document.getElementById('climate-location');
+        if (locEl) {
+            locEl.innerHTML = `<i class="fas fa-location-dot"></i> <strong>${city}, ${state}</strong>`;
+        }
+    }
+
+    function detectLocation() {
+        if (!navigator.geolocation) return;
+        navigator.geolocation.getCurrentPosition(
+            function (pos) {
+                const lat = pos.coords.latitude.toFixed(4);
+                const lon = pos.coords.longitude.toFixed(4);
+                fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`)
+                    .then(r => r.json())
+                    .then(data => {
+                        const addr = data.address || {};
+                        const city  = addr.city || addr.town || addr.village || addr.county || 'Unknown';
+                        const state = addr.state || '';
+                        updateLocationDisplay(city, state);
+                    })
+                    .catch(() => { /* keep fallback */ });
+            },
+            function () { /* permission denied – keep fallback */ },
+            { timeout: 8000 }
+        );
+    }
+
+    document.addEventListener('DOMContentLoaded', detectLocation);
 
 })();
 
@@ -282,15 +323,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    const animatedElements = document.querySelectorAll(
-        '.product-card, .mv-card, .feature-box, .gallery-item, .testimonial-card, .info-item, .contact-form-container'
-    );
+    // Observe ALL elements already marked animate-hidden in the HTML
+    const animatedElements = document.querySelectorAll('.animate-hidden');
 
     animatedElements.forEach((el, index) => {
-        el.classList.add('animate-hidden');
         el.style.transitionDelay = `${(index % 4) * 0.12}s`;
         revealObserver.observe(el);
     });
+
+    // Also watch for JS-added animate-hidden elements (added below)
+    const jsAnimatedElements = document.querySelectorAll(
+        '.product-card, .mv-card, .feature-box, .gallery-item, .testimonial-card, .info-item, .contact-form-container'
+    );
+    jsAnimatedElements.forEach((el, index) => {
+        if (!el.classList.contains('animate-hidden')) {
+            el.classList.add('animate-hidden');
+            el.style.transitionDelay = `${(index % 4) * 0.12}s`;
+            revealObserver.observe(el);
+        }
+    });
+
+    // Immediately reveal elements already visible in viewport on page load
+    setTimeout(() => {
+        document.querySelectorAll('.animate-hidden').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                el.classList.add('animate-visible');
+                el.classList.remove('animate-hidden');
+                revealObserver.unobserve(el);
+            }
+        });
+    }, 100);
 
     // ==========================================
     // 6. Animated Stat Counters
@@ -346,12 +409,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (particleContainer) {
         function createEffervescentBubble() {
-            if (particleContainer.children.length > 25) return;
+            const isMobile = window.innerWidth <= 768;
+            const maxBubbles = isMobile ? 18 : 60;
+            if (particleContainer.children.length > maxBubbles) return;
 
             const bubble = document.createElement('div');
             bubble.classList.add('bubble');
 
-            const size = Math.random() * 26 + 8; // 8px to 34px
+            const size = isMobile 
+                ? (Math.random() * 24 + 14) // 14px to 38px on mobile (subtle, non-obstructive)
+                : (Math.random() * 60 + 20); // 20px to 80px on desktop
             const duration = Math.random() * 5 + 4; // 4s to 9s
             const left = Math.random() * 100;
 
@@ -360,11 +427,43 @@ document.addEventListener('DOMContentLoaded', () => {
             bubble.style.left = `${left}%`;
             bubble.style.animationDuration = `${duration}s`;
 
-            particleContainer.appendChild(bubble);
+            // Click → blast effect (Desktop only to prevent mobile touch obstruction)
+            if (!isMobile) {
+                bubble.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const rect = bubble.getBoundingClientRect();
+                const cx = rect.left + rect.width / 2;
+                const cy = rect.top + rect.height / 2;
+                bubble.classList.add('popping');
+                const shardCount = Math.floor(size / 3) + 14;
+                for (let i = 0; i < shardCount; i++) {
+                    const shard = document.createElement('div');
+                    shard.classList.add('blast-shard');
+                    const angle = (i / shardCount) * 360;
+                    const dist  = size * 2.5 + Math.random() * 80;
+                    const tx    = Math.cos(angle * Math.PI / 180) * dist;
+                    const ty    = Math.sin(angle * Math.PI / 180) * dist;
+                    const dur   = (Math.random() * 0.35 + 0.4).toFixed(2);
+                    const shardSize = Math.random() * 10 + 5;
+                    shard.style.cssText = `
+                        left: ${cx - 3}px;
+                        top:  ${cy - 3}px;
+                        width: ${shardSize}px;
+                        height: ${shardSize}px;
+                        position: fixed;
+                        --tx: ${tx}px;
+                        --ty: ${ty}px;
+                        --shard-dur: ${dur}s;
+                    `;
+                    document.body.appendChild(shard);
+                    setTimeout(() => shard.remove(), parseFloat(dur) * 1000 + 50);
+                }
+                setTimeout(() => bubble.remove(), 300);
+            });
+            }
 
-            setTimeout(() => {
-                bubble.remove();
-            }, duration * 1000);
+            particleContainer.appendChild(bubble);
+            setTimeout(() => { bubble.remove(); }, duration * 1000);
         }
 
         function createSparkle() {
@@ -381,8 +480,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 5000);
         }
 
-        setInterval(createEffervescentBubble, 650);
+        setInterval(createEffervescentBubble, 250);
         setInterval(createSparkle, 1300);
+
+        // Click anywhere → blast ALL bubbles on screen
+        function blastBubble(bubble) {
+            const rect = bubble.getBoundingClientRect();
+            const cx = rect.left + rect.width / 2;
+            const cy = rect.top  + rect.height / 2;
+            const size = rect.width;
+
+            bubble.classList.add('popping');
+
+            const shardCount = Math.floor(size / 3) + 14;
+            for (let i = 0; i < shardCount; i++) {
+                const shard = document.createElement('div');
+                shard.classList.add('blast-shard');
+                const angle = (i / shardCount) * 360;
+                const dist  = size * 2.5 + Math.random() * 80;
+                const tx    = Math.cos(angle * Math.PI / 180) * dist;
+                const ty    = Math.sin(angle * Math.PI / 180) * dist;
+                const dur   = (Math.random() * 0.35 + 0.4).toFixed(2);
+                const shardSize = Math.random() * 10 + 5;
+                shard.style.cssText = `
+                    left: ${cx - 3}px;
+                    top: ${cy - 3}px;
+                    width: ${shardSize}px;
+                    height: ${shardSize}px;
+                    position: fixed;
+                    --tx: ${tx}px;
+                    --ty: ${ty}px;
+                    --shard-dur: ${dur}s;
+                `;
+                document.body.appendChild(shard);
+                setTimeout(() => shard.remove(), parseFloat(dur) * 1000 + 50);
+            }
+
+            setTimeout(() => bubble.remove(), 300);
+        }
+
+        document.addEventListener('click', () => {
+            document.querySelectorAll('.bubble:not(.popping)').forEach(blastBubble);
+        });
     }
 
     // ==========================================
@@ -531,6 +670,126 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.disabled = false;
             });
         });
+    }
+
+    // ==========================================
+    // 11. Greaton Digital Visiting Card Modal
+    // ==========================================
+    const openVcBtn = document.getElementById('open-visiting-card-btn');
+    const mobileNavVcBtn = document.getElementById('mobile-nav-vc');
+    const vcModal = document.getElementById('visiting-card-modal');
+    const closeVcBtn = document.getElementById('close-vc-modal');
+    const vcOverlay = document.getElementById('vc-modal-overlay');
+
+    if (vcModal) {
+        const handleOpenVc = (e) => {
+            e.preventDefault();
+            vcModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        };
+
+        if (openVcBtn) openVcBtn.addEventListener('click', handleOpenVc);
+        if (mobileNavVcBtn) mobileNavVcBtn.addEventListener('click', handleOpenVc);
+
+        const closeVc = () => {
+            vcModal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        if (closeVcBtn) closeVcBtn.addEventListener('click', closeVc);
+        if (vcOverlay) vcOverlay.addEventListener('click', closeVc);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && vcModal.classList.contains('active')) {
+                closeVc();
+            }
+        });
+    }
+
+    // ==========================================
+    // 12. Mobile Bottom Navigation Active Tab Controller
+    // ==========================================
+    const mobileBottomNav = document.querySelector('.mobile-bottom-nav');
+    if (mobileBottomNav) {
+        const navItems = mobileBottomNav.querySelectorAll('.mobile-nav-item');
+        const homeTab = mobileBottomNav.querySelector('[data-tab="home"]');
+        const productsTab = mobileBottomNav.querySelector('[data-tab="products"]');
+        const productsSection = document.getElementById('products');
+
+        function setActiveTab(tabEl) {
+            if (!tabEl) return;
+            navItems.forEach(item => item.classList.remove('active'));
+            tabEl.classList.add('active');
+        }
+
+        navItems.forEach(item => {
+            item.addEventListener('click', function (e) {
+                const tabType = this.getAttribute('data-tab');
+                const href = this.getAttribute('href');
+
+                if (tabType === 'card') {
+                    setActiveTab(this);
+                    return;
+                }
+
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+                    setActiveTab(this);
+                    const targetEl = document.querySelector(href);
+                    if (targetEl) {
+                        const headerOffset = 80;
+                        const elementPos = targetEl.getBoundingClientRect().top;
+                        const offsetPos = elementPos + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                            top: href === '#home' ? 0 : offsetPos,
+                            behavior: 'smooth'
+                        });
+                    }
+                } else if (tabType && (tabType === 'home' || tabType === 'products' || tabType === 'partners')) {
+                    setActiveTab(this);
+                }
+            });
+        });
+
+        // Dynamic scroll-spy for mobile bottom navigation on index.html
+        if (productsSection && homeTab && productsTab) {
+            let scrollTimer;
+            const updateActiveOnScroll = () => {
+                const scrollY = window.pageYOffset;
+                const productsTop = productsSection.offsetTop - 220;
+
+                // Don't change active tab if visiting card modal is open
+                const vcModal = document.getElementById('visiting-card-modal');
+                if (vcModal && vcModal.classList.contains('active')) return;
+
+                if (scrollY >= productsTop) {
+                    setActiveTab(productsTab);
+                } else {
+                    setActiveTab(homeTab);
+                }
+            };
+
+            window.addEventListener('scroll', () => {
+                clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(updateActiveOnScroll, 30);
+            }, { passive: true });
+
+            // Run once on load to set proper initial active tab
+            updateActiveOnScroll();
+        }
+
+        // Restore active tab when visiting card modal is closed
+        const closeVcModalBtn = document.getElementById('close-vc-modal');
+        const vcModalOverlay = document.getElementById('vc-modal-overlay');
+        const restoreActiveTab = () => {
+            if (productsSection && window.pageYOffset >= (productsSection.offsetTop - 220)) {
+                setActiveTab(productsTab);
+            } else if (homeTab) {
+                setActiveTab(homeTab);
+            }
+        };
+        if (closeVcModalBtn) closeVcModalBtn.addEventListener('click', restoreActiveTab);
+        if (vcModalOverlay) vcModalOverlay.addEventListener('click', restoreActiveTab);
     }
 
 });

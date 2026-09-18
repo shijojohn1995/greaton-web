@@ -8,7 +8,7 @@
     <meta name="keywords" content="Drizzle Valley Barcodes, Greaton Barcode 8908027734007, 8908027734014, EAN-13 Packaged Drinking Water, Wayanad Mineral Water Label Specs">
     <meta name="author" content="Greaton Food Products">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.greatonfoodproducts.com/barcodes.html">
+    <link rel="canonical" href="https://greaton.co.in/>
 
     <!-- Theme & Mobile Colors -->
     <meta name="theme-color" content="#E50914" media="(prefers-color-scheme: light)">
@@ -27,11 +27,11 @@
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.greatonfoodproducts.com/barcodes.html">
+    <meta property="og:url" content="https://greaton.co.in/>
     <meta property="og:title" content="Official Barcodes & Packaging Specs | Drizzle Valley by Greaton">
     <meta property="og:description" content="Scannable EAN-13 retail barcodes and official labeling specifications for Drizzle Valley 500ml & 1L bottled water.">
-    <meta property="og:image" content="https://www.greatonfoodproducts.com/assets/og-image.jpg">
-    <meta property="og:image:secure_url" content="https://www.greatonfoodproducts.com/assets/og-image.jpg">
+    <meta property="og:image" content="https://greaton.co.in/e.jpg">
+    <meta property="og:image:secure_url" content="https://greaton.co.in/e.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Drizzle Valley Barcodes and Label Specs">
@@ -40,10 +40,10 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.greatonfoodproducts.com/barcodes.html">
+    <meta name="twitter:url" content="https://greaton.co.in/>
     <meta name="twitter:title" content="Drizzle Valley Barcodes | Greaton Food Products">
     <meta name="twitter:description" content="Official EAN-13 barcodes and print vector labels for Drizzle Valley packaged drinking water.">
-    <meta name="twitter:image" content="https://www.greatonfoodproducts.com/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://greaton.co.in/e.jpg">
 
     <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -57,13 +57,13 @@
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.greatonfoodproducts.com/"
+              "item": "https://greaton.co.in/
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Barcodes & Label Specs",
-              "item": "https://www.greatonfoodproducts.com/barcodes.html"
+              "item": "https://greaton.co.in/
             }
           ]
         },
@@ -71,7 +71,7 @@
           "@type": "Product",
           "name": "Drizzle Valley Packaged Drinking Water 1 Litre",
           "gtin13": "8908027734007",
-          "image": "https://www.greatonfoodproducts.com/assets/drizzle_valley_1L.jpg",
+          "image": "https://greaton.co.in/_valley_1L.jpg",
           "description": "1 Litre bottle with verified GS1 standard EAN-13 barcode: 8908027734007.",
           "brand": {
             "@type": "Brand",
@@ -82,7 +82,7 @@
           "@type": "Product",
           "name": "Drizzle Valley Packaged Drinking Water 500ml",
           "gtin13": "8908027734014",
-          "image": "https://www.greatonfoodproducts.com/assets/drizzle_valley_500ml.jpg",
+          "image": "https://greaton.co.in/_valley_500ml.jpg",
           "description": "500ml bottle with verified GS1 standard EAN-13 barcode: 8908027734014.",
           "brand": {
             "@type": "Brand",
@@ -100,9 +100,7 @@
             if (savedTheme === 'light' || savedTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', savedTheme);
             } else {
-                var hour = new Date().getHours();
-                var autoTheme = (hour >= 6 && hour < 18) ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', autoTheme);
+                document.documentElement.setAttribute('data-theme', 'light');
             }
         })();
     </script>
@@ -110,7 +108,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2.9">
+    <link rel="stylesheet" href="style.css?v=3.3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .label-preview-container {
@@ -180,7 +178,7 @@
                     <span id="signal-indicator-badge" class="signal-indicator">
                         <span class="signal-dot"></span> <span>LIVE AUTO-SYNC</span>
                     </span>
-                    <span class="climate-item">
+                    <span class="climate-item" id="climate-location">
                         <i class="fas fa-location-dot"></i> <strong>Wayanad, Kerala</strong>
                     </span>
                     <span class="climate-item" id="climate-weather">
@@ -209,7 +207,7 @@
             <div class="container navbar-container">
                 <a href="index.html" class="logo-wrapper">
                     <div class="logo">
-                        <img src="assets/logo.jpg" alt="Greaton Food Products Logo">
+                        <img src="assets/logo.jpg" alt="Greaton Food Products Logo" id="site-logo">
                     </div>
                 </a>
 
@@ -415,6 +413,42 @@
         </div>
     </footer>
 
+    <!-- Desktop Sticky Call and WhatsApp Floating Actions -->
+    <div class="sticky-contact-bar">
+        <a href="tel:+919072119994" class="sticky-btn sticky-call-btn" aria-label="Direct Call">
+            <i class="fas fa-phone"></i>
+            <span class="sticky-btn-text">Call Now</span>
+        </a>
+        <a href="https://wa.me/919072119994?text=Hello%20Greaton%20Food%20Products,%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" class="sticky-btn sticky-wa-btn" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="sticky-btn-text">WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Mobile Sticky Footer Bottom Navigation Bar (Matching Reference Layout) -->
+    <nav class="mobile-bottom-nav" aria-label="Mobile Navigation Bar">
+        <a href="index.html#home" class="mobile-nav-item" data-tab="home" aria-label="Home">
+            <i class="fas fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="tel:+919072119994" class="mobile-nav-item" data-tab="support" aria-label="Support & Direct Call">
+            <i class="fas fa-headset"></i>
+            <span>Support</span>
+        </a>
+        <a href="index.html#products" class="mobile-nav-item" data-tab="products" aria-label="Beverage Products">
+            <i class="fas fa-basket-shopping"></i>
+            <span>Products</span>
+        </a>
+        <a href="https://wa.me/919072119994?text=Hello%20Greaton%20Food%20Products,%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" class="mobile-nav-item" data-tab="whatsapp" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="assets/Greaton_Visiting_Card.pdf" target="_blank" download="Greaton_Visiting_Card.pdf" class="mobile-nav-item" data-tab="card" aria-label="Digital Visiting Card">
+            <i class="fas fa-id-card"></i>
+            <span>Card</span>
+        </a>
+    </nav>
+
     <!-- Chat Widget -->
     <button id="chat-widget-btn" class="chat-widget-btn" aria-label="Open Instant Chat">
         <i class="fas fa-comment-dots"></i>
@@ -458,6 +492,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="script.js?v=2.8"></script>
+    <script src="script.js?v=3.2"></script>
 </body>
 </html>

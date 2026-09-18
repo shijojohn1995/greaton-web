@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://www.greatonfoodproducts.com/sitemap.xml
+Sitemap: https://greaton.co.in/

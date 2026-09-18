@@ -8,7 +8,7 @@
     <meta name="keywords" content="Greaton Partners, Thirumala Industries, Beverage Manufacturing Partner, Water Bottling Plant Gundlupet, Greaton Food Products Verification">
     <meta name="author" content="Greaton Food Products">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.greatonfoodproducts.com/partners.html">
+    <link rel="canonical" href="https://greaton.co.in/>
 
     <!-- Theme & Mobile Colors -->
     <meta name="theme-color" content="#E50914" media="(prefers-color-scheme: light)">
@@ -27,11 +27,11 @@
 
     <!-- Open Graph / Facebook / WhatsApp -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.greatonfoodproducts.com/partners.html">
+    <meta property="og:url" content="https://greaton.co.in/>
     <meta property="og:title" content="Certified Production Partners | Greaton Food Products & Thirumala Industries">
     <meta property="og:description" content="Official production partner verification, facility address, and scan-to-save contact details for Thirumala Industries.">
-    <meta property="og:image" content="https://www.greatonfoodproducts.com/assets/og-image.jpg">
-    <meta property="og:image:secure_url" content="https://www.greatonfoodproducts.com/assets/og-image.jpg">
+    <meta property="og:image" content="https://greaton.co.in/e.jpg">
+    <meta property="og:image:secure_url" content="https://greaton.co.in/e.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Greaton Production Partner Thirumala Industries">
@@ -40,10 +40,10 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://www.greatonfoodproducts.com/partners.html">
+    <meta name="twitter:url" content="https://greaton.co.in/>
     <meta name="twitter:title" content="Production Partners | Greaton Food Products">
     <meta name="twitter:description" content="Verified partner facilities, addresses, and digital contact information for Thirumala Industries.">
-    <meta name="twitter:image" content="https://www.greatonfoodproducts.com/assets/og-image.jpg">
+    <meta name="twitter:image" content="https://greaton.co.in/e.jpg">
 
     <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -57,13 +57,13 @@
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.greatonfoodproducts.com/"
+              "item": "https://greaton.co.in/
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Partners",
-              "item": "https://www.greatonfoodproducts.com/partners.html"
+              "item": "https://greaton.co.in/
             }
           ]
         },
@@ -94,9 +94,7 @@
             if (savedTheme === 'light' || savedTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', savedTheme);
             } else {
-                var hour = new Date().getHours();
-                var autoTheme = (hour >= 6 && hour < 18) ? 'light' : 'dark';
-                document.documentElement.setAttribute('data-theme', autoTheme);
+                document.documentElement.setAttribute('data-theme', 'light');
             }
         })();
     </script>
@@ -104,7 +102,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2.9">
+    <link rel="stylesheet" href="style.css?v=3.3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="has-climate-bar">
@@ -120,7 +118,7 @@
                     <span id="signal-indicator-badge" class="signal-indicator">
                         <span class="signal-dot"></span> <span>LIVE AUTO-SYNC</span>
                     </span>
-                    <span class="climate-item">
+                    <span class="climate-item" id="climate-location">
                         <i class="fas fa-location-dot"></i> <strong>Wayanad, Kerala</strong>
                     </span>
                     <span class="climate-item" id="climate-weather">
@@ -149,7 +147,7 @@
             <div class="container navbar-container">
                 <a href="index.html" class="logo-wrapper">
                     <div class="logo">
-                        <img src="assets/logo.jpg" alt="Greaton Food Products Logo">
+                        <img src="assets/logo.jpg" alt="Greaton Food Products Logo" id="site-logo">
                     </div>
                 </a>
 
@@ -303,20 +301,7 @@
                         </div>
                     </div>
 
-                    <div class="partner-card-actions">
-                        <a href="tel:9972120119" class="btn btn-action-pill btn-call">
-                            <i class="fas fa-phone"></i> Call Now
-                        </a>
-                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20your%20beverage%20bottling%20and%20products." target="_blank" class="btn btn-action-pill btn-wa">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="mailto:prasadgowda.m@gmail.com" class="btn btn-action-pill btn-email">
-                            <i class="fas fa-envelope"></i> Email Us
-                        </a>
-                        <a href="https://maps.google.com/?q=B.N.+Road,+Gundlupet,+Karnataka+571111" target="_blank" class="btn btn-action-pill btn-nav">
-                            <i class="fas fa-location-arrow"></i> Directions
-                        </a>
-                    </div>
+
                 </div>
 
                 <!-- QR Card -->
@@ -392,11 +377,6 @@
                             <span class="spec-val">ISI Certified (IS 14543) • FSSAI Approved</span>
                         </div>
                     </div>
-                    <div class="pp-footer-action">
-                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20supply%20for%20Drizzle%20Valley%201L%20Packaged%20Water." target="_blank" class="btn-product-inquire">
-                            <i class="fab fa-whatsapp"></i> Inquire Supply
-                        </a>
-                    </div>
                 </div>
 
                 <!-- Product 2: Unique Packaged Drinking Water -->
@@ -431,11 +411,6 @@
                             <span class="spec-val">100% Recyclable Food-Grade PET</span>
                         </div>
                     </div>
-                    <div class="pp-footer-action">
-                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20supply%20for%20Unique%20Packaged%20Water%20(500ml,%201L,%202L,%205L)." target="_blank" class="btn-product-inquire">
-                            <i class="fab fa-whatsapp"></i> Inquire Supply
-                        </a>
-                    </div>
                 </div>
 
                 <!-- Product 3: Bisley Sparkling Soda -->
@@ -467,11 +442,6 @@
                             <span class="spec-label"><i class="fas fa-wand-magic-sparkles"></i> Feature:</span>
                             <span class="spec-val">Long-Lasting Bubbles • Zero Calorie</span>
                         </div>
-                    </div>
-                    <div class="pp-footer-action">
-                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20supply%20for%20Bisley%20Club%20Soda%20(600ml,%201L)." target="_blank" class="btn-product-inquire">
-                            <i class="fab fa-whatsapp"></i> Inquire Supply
-                        </a>
                     </div>
                 </div>
 
@@ -506,11 +476,6 @@
                                 <span class="spec-pill highlight">200ml Quick-Sip</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="pp-footer-action">
-                        <a href="https://wa.me/919972120119?text=Hello%20Thirumala%20Industries,%20I%20am%20enquiring%20about%20supply%20for%20Bisley%20Carbonated%20Drink%20(Lemon%20&%20Orange%20200ml)." target="_blank" class="btn-product-inquire">
-                            <i class="fab fa-whatsapp"></i> Inquire Supply
-                        </a>
                     </div>
                 </div>
             </div>
@@ -555,145 +520,7 @@
         </div>
     </section>
 
-    <!-- Factory Location & Infrastructure Section -->
-    <section class="section bg-light partner-facility-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Manufacturing Hub</span>
-                <h2>Gundlupet Bottling Facility</h2>
-                <p>Strategically situated on B.N. Road, Gundlupet near the Kerala&ndash;Karnataka border, offering high-throughput production and rapid distribution connectivity.</p>
-                <div class="divider"></div>
-            </div>
 
-            <div class="facility-grid">
-                <!-- Facility Highlights -->
-                <div class="facility-highlights-card animate-hidden">
-                    <h3>Facility Specifications &amp; Capabilities</h3>
-                    <ul class="facility-specs-list">
-                        <li>
-                            <i class="fas fa-circle-check"></i>
-                            <div>
-                                <strong>Operational Heritage (Estd. 2009)</strong>
-                                <p>15+ years of continuous bottling excellence, trusted by leading regional brands and distributors.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-circle-check"></i>
-                            <div>
-                                <strong>7-Stage RO &amp; Micro-Purification</strong>
-                                <p>Multi-barrier sand filtration, activated carbon, micron polishing, UV disinfection, and ozonation ensuring 100% pure drinking water.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-circle-check"></i>
-                            <div>
-                                <strong>Automated High-Speed Bottling Lines</strong>
-                                <p>Non-contact filling and capping lines engineered for 500ml, 1L, 2L, 5L waters, crisp club sodas, and carbonated fruit beverages.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-circle-check"></i>
-                            <div>
-                                <strong>Statutory &amp; Quality Certifications</strong>
-                                <p>Certified under Bureau of Indian Standards (ISI IS 14543) and fully licensed by FSSAI.</p>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <div class="facility-quick-contact">
-                        <div class="fqc-item">
-                            <i class="fas fa-building-circle-check"></i>
-                            <span><strong>Address:</strong> Assement No: 286, 1st Division, B.N. Road, Near Sales Tax Office, Gundlupet - 571111</span>
-                        </div>
-                        <div class="fqc-item">
-                            <i class="fas fa-headset"></i>
-                            <span><strong>Contact:</strong> Tel: <a href="tel:9972120119">+91 9972120119</a> &bull; Email: <a href="mailto:prasadgowda.m@gmail.com">prasadgowda.m@gmail.com</a></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Google Map Iframe Card -->
-                <div class="facility-map-card animate-hidden">
-                    <div class="facility-map-header">
-                        <div class="map-badge"><i class="fas fa-map-pin"></i> Gundlupet, Chamarajanagar Dist - 571111</div>
-                        <a href="https://maps.google.com/?q=B.N.+Road,+Gundlupet,+Karnataka+571111" target="_blank" class="map-open-link">
-                            Open in Google Maps <i class="fas fa-arrow-up-right-from-square"></i>
-                        </a>
-                    </div>
-                    <div class="partner-map-container">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=B.N.+Road,+Gundlupet,+Karnataka+571111&t=&z=14&ie=UTF8&iwloc=&output=embed" 
-                            width="100%" 
-                            height="380" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Thirumala Industries Production Facility Location">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partner Supply Enquiry Section -->
-    <section class="section partner-inquiry-section">
-        <div class="container">
-            <div class="partner-inquiry-box animate-hidden">
-                <div class="inquiry-header text-center">
-                    <span class="section-tag">Direct Commercial Connect</span>
-                    <h2>Partner Bottling &amp; Supply Inquiry</h2>
-                    <p>Request bulk supply quotes, dealership distribution, or contract bottling directly with Thirumala Industries &amp; Greaton Food Products.</p>
-                    <div class="divider"></div>
-                </div>
-
-                <form class="partner-inquiry-form" id="partner-inquiry-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label><i class="fas fa-user"></i> Full Name / Business Name *</label>
-                            <input type="text" id="pi-name" placeholder="e.g. Ramesh Kumar / Star Supermarket" required>
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fas fa-phone"></i> Phone Number *</label>
-                            <input type="tel" id="pi-phone" placeholder="e.g. +91 98765 43210" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label><i class="fas fa-envelope"></i> Email Address</label>
-                            <input type="email" id="pi-email" placeholder="e.g. ramesh@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label><i class="fas fa-boxes-stacked"></i> Product Line of Interest *</label>
-                            <select id="pi-product" required>
-                                <option value="" disabled selected>Select Product Line</option>
-                                <option value="Drizzle Valley 1L (Packaged Drinking Water)">Drizzle Valley 1 Litre (Greaton Flagship Packaged Water)</option>
-                                <option value="Unique Packaged Water (500ml, 1L, 2L, 5L)">Unique Packaged Water (500ml, 1L, 2L, 5L)</option>
-                                <option value="Bisley Sparkling Soda (600ml, 1L)">Bisley Sparkling Club Soda (600ml, 1L)</option>
-                                <option value="Bisley Carbonated Drink (Lemon & Orange 200ml)">Bisley Carbonated Drink (Lemon &amp; Orange 200ml)</option>
-                                <option value="Complete Beverage Portfolio">Full Portfolio (Water, Soda &amp; Carbonated Drinks)</option>
-                                <option value="Contract / Institutional Bottling">Contract / Institutional Bottling</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label><i class="fas fa-comment-dots"></i> Estimated Requirement / Message</label>
-                        <textarea id="pi-message" rows="3" placeholder="Specify estimated order quantity, delivery town/location, or specific questions..."></textarea>
-                    </div>
-                    <div class="form-submit-actions">
-                        <button type="submit" class="btn btn-primary btn-submit-inquiry">
-                            <i class="fab fa-whatsapp"></i> Send Inquiry via WhatsApp
-                        </button>
-                        <a href="tel:9972120119" class="btn btn-outline">
-                            <i class="fas fa-phone-volume"></i> Direct Call: 9972120119
-                        </a>
-                    </div>
-                    <div id="pi-status" class="form-status"></div>
-                </form>
-            </div>
-        </div>
-    </section>
 
     <!-- Partner FAQ Section -->
     <section class="section partner-faq-section" id="faq">
@@ -794,6 +621,42 @@
         </div>
     </footer>
 
+    <!-- Desktop Sticky Call and WhatsApp Floating Actions -->
+    <div class="sticky-contact-bar">
+        <a href="tel:+919072119994" class="sticky-btn sticky-call-btn" aria-label="Direct Call">
+            <i class="fas fa-phone"></i>
+            <span class="sticky-btn-text">Call Now</span>
+        </a>
+        <a href="https://wa.me/919072119994?text=Hello%20Greaton%20Food%20Products,%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" class="sticky-btn sticky-wa-btn" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="sticky-btn-text">WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Mobile Sticky Footer Bottom Navigation Bar (Matching Reference Layout) -->
+    <nav class="mobile-bottom-nav" aria-label="Mobile Navigation Bar">
+        <a href="index.html#home" class="mobile-nav-item" data-tab="home" aria-label="Home">
+            <i class="fas fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="tel:+919072119994" class="mobile-nav-item" data-tab="support" aria-label="Support & Direct Call">
+            <i class="fas fa-headset"></i>
+            <span>Support</span>
+        </a>
+        <a href="index.html#products" class="mobile-nav-item" data-tab="products" aria-label="Beverage Products">
+            <i class="fas fa-basket-shopping"></i>
+            <span>Products</span>
+        </a>
+        <a href="https://wa.me/919072119994?text=Hello%20Greaton%20Food%20Products,%20I%20would%20like%20to%20inquire%20about%20your%20products." target="_blank" class="mobile-nav-item" data-tab="whatsapp" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="partners.html" class="mobile-nav-item active" data-tab="partners" aria-label="Partners">
+            <i class="fas fa-handshake"></i>
+            <span>Partners</span>
+        </a>
+    </nav>
+
     <!-- Chat Widget -->
     <button id="chat-widget-btn" class="chat-widget-btn" aria-label="Open Instant Chat">
         <i class="fas fa-comment-dots"></i>
@@ -843,7 +706,7 @@
             document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"><\/script>');
         }
     </script>
-    <script src="script.js?v=2.9"></script>
+    <script src="script.js?v=3.2"></script>
 
     <!-- Dynamic QR & Canvas Script with Red Theme Palette -->
     <script>
